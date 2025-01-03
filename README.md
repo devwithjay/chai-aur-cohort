@@ -8,7 +8,7 @@
 <!-- Social Media Links -->
 <div align= center>
 
-[![Twitter Badge](https://img.shields.io/badge/-@devwithjay-1ca0f1?style=social&labelColor=red&logo=x&logoColor=black&link=https://twitter.com/devwithjay)](https://twitter.com/devwithjay) &nbsp;&nbsp; [![Linkedin Badge](https://img.shields.io/badge/@devwithjay-0e76a8)](https://www.linkedin.com/in/devwithjay/) &nbsp;&nbsp; [![Mail Badge](https://img.shields.io/badge/-hello@devwithjay.com-c0392b?style=flat&labelColor=c0392b&logo=gmail&logoColor=pink)](mailto:hello@devwithjay.com) 
+[![Twitter Badge](https://img.shields.io/badge/-@devwithjay-1ca0f1?style=social&labelColor=red&logo=x&logoColor=black&link=https://twitter.com/devwithjay)](https://twitter.com/devwithjay) &nbsp;&nbsp; [![Linkedin Badge](https://img.shields.io/badge/@devwithjay-0e76a8)](https://www.linkedin.com/in/devwithjay/) &nbsp;&nbsp; [![Mail Badge](https://img.shields.io/badge/-hello@devwithjay.com-c0392b?style=flat&labelColor=c0392b&logo=gmail&logoColor=pink)](mailto:hello@devwithjay.com) &nbsp; [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 </div>
 
@@ -47,3 +47,7 @@
 - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) – modular css
 
   </br>
+
+## License
+
+This project is licensed under the [MIT License](./LICENSE). &nbsp;Feel free to learn, add upon, and share my work!
