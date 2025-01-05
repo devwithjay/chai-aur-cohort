@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: white;
+  background-color: #0a0a0a;
+}
+
+.hero {
+}
+
+.announcement {
+}
+
+.announcement-link {
+  /*  */
+}
+
+.announcement-link:hover {
+}
+
+.announcement-text {
+}
+
+.announcement-button {
+}
+
+.hero-content {
+}
+
+.hero-title {
+}
+
+.hero-description {
+}
+
+.cta-button {
+}
+
+.cta-button:hover {
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 1rem;
+  }
+
+  .announcement-link {
+    font-size: 0.75rem;
+  }
+
+  .hero-content {
+    padding: 0 1rem;
+  }
+}
