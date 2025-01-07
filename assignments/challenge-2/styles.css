@@ -1,0 +1,135 @@
+:root {
+  --primary-blue: #3b82f6;
+  --primary-blue-dark: #2563eb;
+  --gray-800: #1f2937;
+  --neutral-400: #9ca3af;
+  --neutral-900: #111827;
+
+  /* Dark mode variables */
+  --bg-dark: #111827;
+  --text-dark: #ffffff;
+  --border-dark: #374151;
+}
+
+body {
+}
+
+.hero {
+}
+
+.hero-grid {
+}
+
+.content-col h1 {
+}
+
+.content-col p {
+}
+
+.cta-group {
+}
+
+.sr-only {
+}
+
+.input-wrapper {
+}
+
+input[type='text'] {
+}
+
+.demo-button {
+}
+
+.demo-button:hover {
+}
+
+.brands-section {
+}
+
+.trusted-by {
+}
+
+.brand-logos {
+}
+
+.brand-logo {
+}
+
+.image-col {
+}
+
+.hero-image {
+}
+
+@media (min-width: 640px) {
+  .hero {
+  }
+
+  .content-col h1 {
+  }
+
+  .cta-group {
+  }
+
+  .demo-button {
+  }
+
+  .input-wrapper {
+  }
+
+  input[type='text'] {
+  }
+}
+
+@media (min-width: 768px) {
+  .content-col h1 {
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+  }
+
+  .hero-grid {
+  }
+
+  .content-col h1 {
+  }
+
+  .cta-group {
+  }
+
+  .brands-section {
+  }
+
+  .image-col {
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-grid {
+    gap: 3rem;
+  }
+}
+
+.dark-mode-toggle {
+}
+
+.dark-mode-toggle:hover {
+}
+
+body.dark {
+}
+
+.dark-mode-toggle {
+}
+
+.dark-mode-toggle:hover {
+}
+
+input[type='text'].dark {
+}
+
+input[type='text']::placeholder {
+}
