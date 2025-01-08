@@ -7,8 +7,9 @@
 		<link rel="stylesheet" href="styles.css" />
 	</head>
 	<body>
-		<button class="dark-mode-toggle" id="darkModeToggle">Switch Theme</button>
-
+		<div class="switch-theme-btn">
+			<button class="dark-mode-toggle" id="darkModeToggle">Switch Theme</button>
+		</div>
 		<div class="hero">
 			<div class="hero-grid">
 				<div class="content-col">
@@ -20,7 +21,6 @@
 
 					<div class="cta-group">
 						<div class="input-wrapper">
-							<label for="hero-input" class="sr-only">Search</label>
 							<input
 								type="text"
 								id="hero-input"
@@ -33,9 +33,10 @@
 
 					<!-- Brands -->
 					<div class="brands-section">
-						<span class="trusted-by">Trusted by:</span>
+						<span class="trusted-by">TRUSTED BY:</span>
 						<div class="brand-logos">
 							<svg
+							class="brand-logo"
 								width="106"
 								height="36"
 								viewBox="0 0 106 36"
@@ -176,11 +177,7 @@
 				</div>
 
 				<div class="image-col">
-					<img
-						class="hero-image"
-						src="assets/hero.avif"
-						alt="Hero Image"
-					/>
+					<img class="hero-image" src="assets/hero.avif" alt="Hero Image" />
 				</div>
 			</div>
 		</div>
