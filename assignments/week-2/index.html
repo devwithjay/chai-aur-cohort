@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Table Challenges | Chaicode</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            color: #2d3748;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #3182ce, #4299e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .subtitle {
+            color: #4a5568;
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .challenges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .challenge-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .challenge-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .challenge-card h3 {
+            color: #2d3748;
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .challenge-card p {
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, #3182ce, #4299e1);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 10px rgba(66, 153, 225, 0.3);
+        }
+
+        .btn:hover {
+            background: linear-gradient(45deg, #2c5282, #3182ce);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(66, 153, 225, 0.4);
+        }
+
+        .level {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .beginner { 
+            background: linear-gradient(45deg, #9ae6b4, #c6f6d5);
+            color: #22543d;
+        }
+        
+        .advanced { 
+            background: linear-gradient(45deg, #fbd38d, #fefcbf);
+            color: #744210;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .challenges-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 2rem 1rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="hero">
+            <h1>Pricing Table Challenges</h1>
+            <p class="subtitle">Master the art of creating beautiful and responsive pricing tables<br>Perfect your HTML & CSS skills with hands-on challenges</p>
+        </header>
+
+        <div class="challenges-grid">
+            <div class="challenge-card">
+                <span class="level beginner">Beginner Friendly</span>
+                <h3>Basic Pricing Table</h3>
+                <p>Create a clean and simple pricing table with essential features. Perfect for beginners looking to build their first pricing component.</p>
+                <a href="pricing-table-1/index.html" class="btn">Start Challenge</a>
+            </div>
+
+            <div class="challenge-card">
+                <span class="level advanced">Advanced Design</span>
+                <h3>Premium Pricing Table</h3>
+                <p>Build an advanced pricing table with modern design elements, animations, and responsive features.</p>
+                <a href="pricing-table-2/index.html" class="btn">Start Challenge</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

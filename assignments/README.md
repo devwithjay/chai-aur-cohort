@@ -16,6 +16,8 @@
 
 - ### [Week 1 : CSS Challenges](/assignments/week-1/README.md)
 
+- ### [Week 2 : Advanced CSS Challenges](/assignments/week-2/README.md)
+
   </br>
 
 ## Contributing
