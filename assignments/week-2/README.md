@@ -19,3 +19,11 @@
   <p align=center>
     <img width = "600px" alt="Jio Network blocking the view? Network switch reveals the magic!" src="./screenshots/chai-patti-pricing.png">
   <p>
+
+#
+
+### [Chai Aur Fitness](./pricing-table-2/challenge.css)
+
+  <p align=center>
+    <img width = "600px" alt="Jio Network blocking the view? Network switch reveals the magic!" src="./screenshots/chai-aur-fitness-pricing.png">
+  <p>

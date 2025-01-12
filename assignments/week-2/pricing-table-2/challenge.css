@@ -1,0 +1,106 @@
+/* Challenge CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+}
+
+.container {
+  /* Add your styles here */
+}
+
+.header {
+  /* Add your styles here */
+}
+
+h1 {
+  /* Add your styles here */
+}
+
+.subtitle {
+  /* Add your styles here */
+}
+
+.pricing-container {
+  /* Add your styles here */
+}
+
+.pricing-card {
+  /* Add your styles here */
+}
+
+.pricing-card:hover {
+  /* Add your styles here */
+}
+
+.card-header {
+  /* Add your styles here */
+}
+
+.icon {
+  /* Add your styles here */
+}
+
+.popular-tag {
+  /* Add your styles here */
+}
+
+.price-block {
+  /* Add your styles here */
+}
+
+.price {
+  /* Add your styles here */
+}
+
+.period {
+  /* Add your styles here */
+}
+
+.features {
+  /* Add your styles here */
+}
+
+.features li {
+  /* Add your styles here */
+}
+
+.features li.disabled {
+  /* Add your styles here */
+}
+
+.join-btn {
+  /* Add your styles here */
+}
+
+.join-btn:hover {
+  /* Add your styles here */
+}
+
+/* Custom Class Modifiers */
+.warrior {
+  /* Add your styles here */
+}
+
+.champion {
+  /* Add your styles here */
+}
+
+.champion .price {
+  /* Add your styles here */
+}
+
+.champion .join-btn {
+  /* Add your styles here */
+}
+
+.champion .join-btn:hover {
+  /* Add your styles here */
+}
