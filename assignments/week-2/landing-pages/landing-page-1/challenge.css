@@ -1,0 +1,75 @@
+/* Challenge CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styles */
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+}
+
+/* Navbar styles */
+.navbar {
+  /* Add styles for navbar */
+}
+
+.logo {
+  /* Add styles for the logo */
+}
+
+.logo img {
+  /* Add styles for logo image */
+}
+
+.nav-links a {
+  /* Add styles for nav links */
+}
+
+.nav-links a:hover {
+  /* Add hover styles for nav links */
+}
+
+/* Hero section styles */
+.hero {
+  /* Add styles for hero section */
+}
+
+.hero-content {
+  /* Add styles for hero content */
+}
+
+.hero-content h1 {
+  /* Add styles for hero heading */
+}
+
+.hero-content p {
+  /* Add styles for hero paragraph */
+}
+
+.cta-button {
+  /* Add styles for CTA button */
+}
+
+.cta-button:hover {
+  /* Add hover styles for CTA button */
+}
+
+/* Features section styles */
+.features {
+  /* Add styles for features section */
+}
+
+.feature {
+  /* Add styles for each feature block */
+}
+
+.feature h3 {
+  /* Add styles for feature heading */
+}
+
+.feature p {
+  /* Add styles for feature paragraph */
+}
