@@ -1,75 +1,263 @@
-/* Challenge CSS */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Basic styles */
 body {
-  font-family: "Arial", sans-serif;
-  line-height: 1.6;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.4;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('./assets/chaigym.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Navbar styles */
 .navbar {
-  /* Add styles for navbar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
+  padding: 0.75rem;
 }
 
 .logo {
-  /* Add styles for the logo */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
 }
 
 .logo img {
-  /* Add styles for logo image */
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .nav-links a {
-  /* Add styles for nav links */
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
 }
 
 .nav-links a:hover {
-  /* Add hover styles for nav links */
+  text-decoration: underline;
 }
 
-/* Hero section styles */
+/* Hero section */
 .hero {
-  /* Add styles for hero section */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  gap: 4rem;
+  text-align: center;
 }
 
 .hero-content {
-  /* Add styles for hero content */
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .hero-content h1 {
-  /* Add styles for hero heading */
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 0.75rem;
 }
 
 .hero-content p {
-  /* Add styles for hero paragraph */
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 1.75rem;
+  letter-spacing: 0.5px;
 }
 
 .cta-button {
-  /* Add styles for CTA button */
+  padding: 0.75rem 1.5rem;
+  background-color: #ff7902;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
 }
 
 .cta-button:hover {
-  /* Add hover styles for CTA button */
+  background-color: #d2691e;
 }
 
-/* Features section styles */
+/* Features section */
 .features {
-  /* Add styles for features section */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  width: 90%;
+  margin: 0 auto;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-radius: 1rem;
 }
 
 .feature {
-  /* Add styles for each feature block */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 2px solid #ff7902;
+  border-radius: 1rem;
+  min-height: 150px;
 }
 
 .feature h3 {
-  /* Add styles for feature heading */
+  color: #ff7902;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
 }
 
 .feature p {
-  /* Add styles for feature paragraph */
+  color: #ddd;
+  font-size: 0.9rem;
+}
+
+/* Tablet styles */
+@media screen and (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+
+  .logo {
+    margin-bottom: 0;
+    font-size: 1.3rem;
+  }
+
+  .logo img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .cta-button {
+    font-size: 1.125rem;
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1024px) {
+  .navbar {
+    padding: 1.25rem 4rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .logo img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .nav-links {
+    gap: 3rem;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+  }
+
+  .hero-content {
+    max-width: 800px;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2.25rem;
+  }
+
+  .features {
+    flex-direction: row;
+    max-width: 1200px;
+    padding: 5rem;
+    gap: 3rem;
+  }
+
+  .feature {
+    min-height: 200px;
+  }
+
+  .feature h3 {
+    font-size: 1.75rem;
+  }
+
+  .feature p {
+    font-size: 1.25rem;
+  }
+}
+
+/* Large desktop */
+@media screen and (min-width: 1440px) {
+  .navbar {
+    padding: 1.5rem 6rem;
+  }
+
+  .hero-content {
+    max-width: 1000px;
+  }
+
+  .hero-content h1 {
+    font-size: 4rem;
+  }
+
+  .hero-content p {
+    font-size: 1.5rem;
+  }
+
+  .features {
+    max-width: 1400px;
+  }
 }
