@@ -1,0 +1,78 @@
+/* Challenge CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+}
+
+/* Navbar styles */
+.navbar {
+  /* Add styles for the navbar */
+}
+
+.logo {
+  /* Add styles for the logo */
+}
+
+.logo img {
+  /* Add styles for the logo image */
+}
+
+.menu a {
+  /* Add styles for the navigation links */
+}
+
+.menu a:hover {
+  /* Add hover styles for navigation links */
+}
+
+/* Hero section styles */
+.hero {
+  /* Add styles for the hero section */
+}
+
+.hero-content {
+  /* Add styles for the hero content container */
+}
+
+.hero-content h1 {
+  /* Add styles for the hero heading */
+}
+
+.hero-content p {
+  /* Add styles for the hero paragraph */
+}
+
+.hero-content img {
+  /* Add styles for the image in the hero section */
+}
+
+.enroll-button {
+  /* Add styles for the enroll button */
+}
+
+.enroll-button:hover {
+  /* Add hover styles for the enroll button */
+}
+
+/* Highlights section styles */
+.highlights {
+  /* Add styles for the highlights section */
+}
+
+.highlight-card {
+  /* Add styles for each highlight card */
+}
+
+.highlight-card h3 {
+  /* Add styles for highlight card headings */
+}
+
+.highlight-card p {
+  /* Add styles for highlight card paragraphs */
+}
