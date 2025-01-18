@@ -38,9 +38,16 @@
 
 #
 
-
 ### [Landing Page-2](./landing-pages/landing-page-2/challenge.css)
 
   <p align=center>
     <img width = "600px" alt="Jio Network blocking the view? Network switch reveals the magic!" src="./landing-pages/screenshots/chai-cohort.png">
+  <p>
+
+#
+
+### [Landing Page-3](./landing-pages/landing-page-3/challenge.css)
+
+  <p align=center>
+    <img width = "600px" alt="Jio Network blocking the view? Network switch reveals the magic!" src="./landing-pages/screenshots/chai-patti.png">
   <p>

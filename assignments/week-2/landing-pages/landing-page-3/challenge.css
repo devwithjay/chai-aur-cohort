@@ -1,0 +1,76 @@
+/* Challenge CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Georgia", serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.header {
+  /* Define header styles here */
+}
+
+.logo {
+  /* Define logo styles here */
+}
+
+.logo img {
+  /* Define image styles within the logo here */
+}
+
+.nav-menu a {
+  /* Define navigation link styles here */
+}
+
+.nav-menu a:hover {
+  /* Define hover styles for navigation links here */
+}
+
+.hero {
+  /* Define hero section styles here */
+}
+
+.hero-text h1 {
+  /* Define styles for h1 in hero-text here */
+}
+
+.hero-text p {
+  /* Define styles for paragraph in hero-text here */
+}
+
+.shop-button {
+  /* Define shop button styles here */
+}
+
+.shop-button:hover {
+  /* Define hover styles for shop button here */
+}
+
+.tea-collection {
+  /* Define tea collection section styles here */
+}
+
+.tea-collection h2 {
+  /* Define styles for h2 in tea collection here */
+}
+
+.tea-cards {
+  /* Define tea cards container styles here */
+}
+
+.tea-card {
+  /* Define styles for each tea card here */
+}
+
+.tea-card h3 {
+  /* Define styles for tea card headings here */
+}
+
+.tea-card p {
+  /* Define styles for tea card paragraph text here */
+}
