@@ -14,7 +14,7 @@
 </div>
 <br>
 
-### [Minimalistic CSS Webpage](./challenge-1/styles.css)
+### [Minimalistic CSS Webpage](./challenge-1)
 
   <p align=center>
     <img width = "600px" alt="Jio Network blocking the view? Network switch reveals the magic!" src="./Challenge-1.JPG">
@@ -22,7 +22,7 @@
 
 #
 
-### [Responsive Webpage with Image](./challenge-2/styles.css)
+### [Responsive Webpage with Image](./challenge-2)
 
   <p align=center>
     <img width = "600px" alt="Jio Network blocking the view? Network switch reveals the magic!" src="./Challenge-2.JPG">

@@ -14,7 +14,7 @@
 </div>
 <br>
 
-### [Chai Patti Pricing](./pricing-tables/pricing-table-1/challenge.css)
+### [Chai Patti Pricing](./pricing-tables/pricing-table-1)
 
   <p align=center>
     <img width = "600px" alt="Jio Network blocking the view? Network switch reveals the magic!" src="./pricing-tables/screenshots/chai-patti-pricing.png">
@@ -22,7 +22,7 @@
 
 #
 
-### [Chai Aur Fitness Pricing](./pricing-tables/pricing-table-2/challenge.css)
+### [Chai Aur Fitness Pricing](./pricing-tables/pricing-table-2)
 
   <p align=center>
     <img width = "600px" alt="Jio Network blocking the view? Network switch reveals the magic!" src="./pricing-tables/screenshots/chai-aur-fitness-pricing.png">
@@ -30,7 +30,7 @@
 
 #
 
-### [Landing Page-1](./landing-pages/landing-page-1/challenge.css)
+### [Landing Page-1](./landing-pages/landing-page-1)
 
   <p align=center>
     <img width = "600px" alt="Jio Network blocking the view? Network switch reveals the magic!" src="./landing-pages/screenshots/chai-aur-fitness.png">
@@ -38,7 +38,7 @@
 
 #
 
-### [Landing Page-2](./landing-pages/landing-page-2/challenge.css)
+### [Landing Page-2](./landing-pages/landing-page-2)
 
   <p align=center>
     <img width = "600px" alt="Jio Network blocking the view? Network switch reveals the magic!" src="./landing-pages/screenshots/chai-cohort.png">
@@ -46,7 +46,7 @@
 
 #
 
-### [Landing Page-3](./landing-pages/landing-page-3/challenge.css)
+### [Landing Page-3](./landing-pages/landing-page-3)
 
   <p align=center>
     <img width = "600px" alt="Jio Network blocking the view? Network switch reveals the magic!" src="./landing-pages/screenshots/chai-patti.png">
