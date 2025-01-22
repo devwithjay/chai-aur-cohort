@@ -14,9 +14,11 @@
 </div>
 <br>
 
-- ### [Week 1 : CSS Challenges](/assignments/week-1/README.md)
+- ### [Week 1 : CSS Challenges](./week-1/README.md)
 
-- ### [Week 2 : Advanced CSS Challenges](/assignments/week-2/README.md)
+- ### [Week 2 : Advanced CSS Challenges](./week-2/README.md)
+
+- ### [Week 3: Javascript Challenges](./week-3/README.md)
 
   </br>
 
