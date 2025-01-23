@@ -5,13 +5,7 @@
 <p align="center">
   Welcome to my Week Three Assignments repository! Here, you'll find solutions to Javascript challenges. 
 </p>
-<br>
 
-<div align= "center">
-
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)&nbsp; [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-
-</div>
 <br>
 
 <p align="center">
@@ -19,6 +13,7 @@
   <a href="#2-loops"><strong>Loops</strong></a> ·
   <a href="#3-arrays"><strong>Arrays</strong></a> 
 </p>
+
 </br>
 
 ### 1. Conditionals

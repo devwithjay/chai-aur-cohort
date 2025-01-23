@@ -5,13 +5,7 @@
 <p align="center">
   Welcome to my Week Two Assignments repository! Here, you'll find solutions to CSS challenges. 
 </p>
-<br>
 
-<div align= "center">
-
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)&nbsp; [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-
-</div>
 <br>
 
 ### [Chai Patti Pricing](./pricing-tables/pricing-table-1)
