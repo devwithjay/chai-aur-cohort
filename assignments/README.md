@@ -18,7 +18,9 @@
 
 - ### [Week 2 : Advanced CSS Challenges](./week-2/README.md)
 
-- ### [Week 3: Javascript Challenges](./week-3/README.md)
+- ### [Week 3: Array, Loops & Conditionals Challenges](./week-3/README.md)
+
+- ### [Week 4: Prototype & Object Challenges](./week-4/README.md)
 
   </br>
 
