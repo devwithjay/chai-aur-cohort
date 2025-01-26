@@ -9,16 +9,19 @@
   Description: Constructor function for creating Animal objects.
 
   @param {string} name - The name of the animal.
-  
+
   Method: makeSound
   Description: Returns a generic sound string.
 
   @returns {string} "Some generic sound".
 */
-
-// You need to implement the Animal constructor function and its prototype method
 function Animal(name) {
-  // Initialize name property
+  this.name = name;
 }
 
-// Define makeSound method on Animal's prototype
+Animal.prototype.makeSound = function () {
+  return "Some generic sound";
+};
+
+// Export the function for reuse in other modules
+module.exports = Animal;

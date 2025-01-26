@@ -20,10 +20,13 @@
   @returns {void}
 */
 
-// You need to implement the Playlist constructor function and its prototype method
-
 function Playlist() {
-  // Initialize songs property
+  this.songs = [];
 }
 
-// Define addSong method on Playlist's prototype
+Playlist.prototype.addSong = function (song) {
+  this.songs.push(song);
+};
+
+// Export the function for reuse in other modules
+module.exports = Playlist;

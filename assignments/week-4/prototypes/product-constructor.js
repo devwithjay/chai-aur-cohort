@@ -1,13 +1,7 @@
 /*
   Question:
-  You are developing an online store system where each product has the following properties:
-  
-  - name: The name of the product (e.g., "Laptop").
-  - price: The price of the product (a positive integer).
-  - stock: The available stock (a non-negative integer).
-
-  Implement the following methods:
-
+  Create a Product constructor that initializes name, price, and stock properties.
+  Implement:
   - applyDiscount(percent): Reduces the price by the given percentage and rounds to the nearest integer.
   - purchase(quantity): Reduces stock if enough items are available, otherwise returns "Not enough stock".
 
@@ -37,12 +31,19 @@
   @returns {string|void} "Not enough stock" if purchase is not possible, otherwise reduces stock.
 */
 
-// You need to implement the Product constructor function and its prototype methods
-
 function Product(name, price, stock) {
-  // Initialize name, price, and stock properties
+  this.name = name;
+  this.price = price;
+  this.stock = stock;
 }
 
-// Define applyDiscount method on Product's prototype
+Product.prototype.applyDiscount = function (percent) {
+  this.price = Math.round(this.price * (1 - percent / 100));
+};
 
-// Define purchase method on Product's prototype
+Product.prototype.purchase = function (quantity) {
+  return quantity <= this.stock ? (this.stock -= quantity) : "Not enough stock";
+};
+
+// Export the function for reuse in other modules
+module.exports = Product;

@@ -29,12 +29,17 @@
   @returns {string} "Book found" or "Book not found".
 */
 
-// You need to implement the Library constructor function and its prototype methods
-
 function Library() {
-  // Initialize books property
+  this.books = [];
 }
 
-// Define addBook method on Library's prototype
+Library.prototype.addBook = function (book) {
+  this.books.push(book);
+};
 
-// Define findBook method on Library's prototype
+Library.prototype.findBook = function (title) {
+  return this.books.includes(title) ? "Book found" : "Book not found";
+};
+
+// Export the function for reuse in other modules
+module.exports = Library;
