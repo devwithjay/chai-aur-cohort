@@ -17,8 +17,8 @@
 <p align="center">
   <a href="#introduction"><strong>Introduction</strong></a> ·
   <a href="#documentation"><strong>Documentation</strong></a> ·
-  <a 
-  href="#tech-stack"><strong>Tech Stack</strong></a> 
+  <a href="#tech-stack"><strong>Tech Stack</strong></a> · 
+  <a href="#contributing"><strong>Contributing</strong></a> 
 </p>
 </br>
 
