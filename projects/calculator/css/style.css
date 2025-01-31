@@ -1,5 +1,95 @@
+:root {
+  /* Background colors */
+  --background-primary-dark: #22252D;
+  --background-primary-light: #ffffff;
+  --calculator-bg-dark: #2A2D3A;
+  --calculator-bg-light: #F9F9F9;
+  --button-bg-dark: #282B35;
+  --button-bg-light: #F7F7F7;
+  
+  /* Text colors */
+  --text-control: #5FDACC;
+  --text-arithmetic: #E76C6C;
+  --text-dark-mode: #ffffff;
+  --text-light-mode: #282B33;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-primary);
+  font-family: Arial, sans-serif;
+}
+
+.calculator-container {
+  position: relative;
+  padding-top: 40px;
+}
+
+.calculator {
+  width: 320px;
+  background-color: var(--calculator-bg);
+  border-radius: 2rem;
+  padding-top: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.display {
+  padding: 1rem 2rem;
+  text-align: right;
+  color: var(--text-color);
+  background-color: var(--background-primary);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.previous-operand {
+  font-size: 1.2rem;
+  opacity: 0.7;
+  min-height: 24px;
+}
+
+.current-operand {
+  font-size: 2.5rem;
+  margin-top: 8px;
+}
+
+.keypad {
+  display: grid;
+  padding: 2rem 1rem;
+  background-color: var(--calculator-bg-light);
+  grid-template-columns: repeat(4, 1fr);
+  border-radius: 2rem;
+  gap: 10px;
+}
+
+.button {
+  padding: 15px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--button-bg-light);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.button.control {
+  color: var(--text-control);
+}
+
+.button.arithmetic {
+  color: var(--text-arithmetic);
 }
