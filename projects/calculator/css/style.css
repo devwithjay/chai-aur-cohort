@@ -17,7 +17,7 @@ html[data-theme='light'] {
 }
 
 html[data-theme='dark'] {
-  --bg-body:#1e2128;
+  --bg-body: #1e2128;
   --bg-primary: #22252d;
   --calculator-bg: #2a2d3a;
   --button-bg: #282b35;
@@ -100,8 +100,7 @@ body {
   margin: 0 1.5rem;
   text-align: right;
   color: var(--text);
-  overflow-x: auto;
-  scrollbar-width: none;
+
   background-color: var(--display-bg);
   border-radius: 10px;
   margin-bottom: 20px;
@@ -114,11 +113,19 @@ body {
   font-size: 1.2rem;
   opacity: 0.7;
   min-height: 24px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
 }
 
 .current-op {
   font-size: 2.5rem;
-  margin-top: 8px;
+  margin-top: 1rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  text-overflow: clip;
+  height: min-content;
 }
 
 .keypad {
