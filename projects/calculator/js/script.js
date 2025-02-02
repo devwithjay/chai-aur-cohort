@@ -17,6 +17,12 @@ darkToggle.addEventListener('click', () => {
 
 let displayString = '0'
 
+function clear() {
+  displayString = '0'
+
+  updateDisplay();
+}
+
 function appendNumber(number) {
   if (displayString === '0' && number !== '.') {
     displayString = number; 
@@ -40,4 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     }
   })
+
+  document.querySelector('.control').addEventListener('click', clear);
 })
