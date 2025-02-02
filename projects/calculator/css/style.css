@@ -96,9 +96,12 @@ body {
 }
 
 .display {
-  padding: 1rem 2rem;
+  padding: 1rem 0;
+  margin: 0 1.5rem;
   text-align: right;
   color: var(--text);
+  overflow-x: auto;
+  scrollbar-width: none;
   background-color: var(--display-bg);
   border-radius: 10px;
   margin-bottom: 20px;
