@@ -152,6 +152,10 @@ body {
     opacity var(--transition-speed) ease;
 }
 
+.button.arithmetic.control {
+  color: var(--text-control); 
+}
+
 .del {
   font-size: 2rem;
 }

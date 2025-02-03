@@ -116,6 +116,7 @@ class Calculator {
       '-': 1,
       '×': 2,
       '÷': 2,
+      '%': 2,
     };
     return precedence[op] || 0;
   };
@@ -128,6 +129,13 @@ class Calculator {
       '÷': (a, b) => {
         if (b === 0) throw new Error('Division by zero');
         return Number.isInteger(a / b) ? a / b : Number((a / b).toFixed(2));
+      },
+      '%': (a, b) => {
+        if (b === 0) {
+          alert('Modulo by zero is undefined');
+          return null;
+        }
+        return a % b;
       },
     };
 
@@ -192,13 +200,16 @@ class Calculator {
   };
 
   chooseOperation = op => {
-    if (this.displayString === '') return;
+    if (this.displayString === '' || this.displayString.endsWith(' ')) return;
 
-    if (!this.displayString.endsWith(' ')) {
-      this.displayString += ` ${op} `;
-      this.operation = op;
-      this.shouldResetDisplay = false;
+    // If an operation is already selected, compute it first
+    if (this.operation) {
+      this.compute();
     }
+
+    this.displayString += ` ${op} `;
+    this.operation = op;
+    this.shouldResetDisplay = false;
     this.updateDisplay();
   };
 
@@ -224,6 +235,8 @@ class Calculator {
   updateDisplay = () => {
     this.display.textContent = this.displayString;
     this.previousDisplay.textContent = this.previousOperand;
+
+    this.display.scrollLeft = this.display.scrollWidth;
   };
 }
 
