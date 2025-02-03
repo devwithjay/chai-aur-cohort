@@ -16,7 +16,8 @@ class Calculator {
     this.numberButtons = document.querySelectorAll('.button');
     this.operationButtons = document.querySelectorAll('.arithmetic');
     this.equalsButton = document.querySelector('.arithmetic:last-child');
-    this.deleteButton = document.querySelector('.del')
+    this.toggleSignButton = document.querySelector('.control:nth-child(2)');
+    this.deleteButton = document.querySelector('.del');
     this.clearButton = document.querySelector('.control');
     this.lightToggle = document.querySelector('.sun');
     this.darkToggle = document.querySelector('.moon');
@@ -55,6 +56,9 @@ class Calculator {
 
     // Delete Button
     this.deleteButton.addEventListener('click', () => this.delete());
+
+    // Toggle Sign Button
+    this.toggleSignButton.addEventListener('click', () => this.toggleSign());
   }
 
   setTheme = theme => {
@@ -81,6 +85,26 @@ class Calculator {
     // If display becomes empty, set to '0'
     if (this.displayString === '' || this.displayString === '-') {
       this.displayString = '0';
+    }
+
+    this.updateDisplay();
+  };
+
+  toggleSign = () => {
+    // Handle case when there's an operation pending
+    if (this.displayString.includes(' ')) {
+      const parts = this.displayString.split(' ');
+      const lastNumber = parts[parts.length - 1];
+
+      // Only toggle sign if there's a number after the operator
+      if (lastNumber !== '') {
+        parts[parts.length - 1] = (-parseFloat(lastNumber)).toString();
+        this.displayString = parts.join(' ');
+      }
+    } else {
+      // Toggle sign for single number
+      const currentNumber = parseFloat(this.displayString);
+      this.displayString = (-currentNumber).toString();
     }
 
     this.updateDisplay();
