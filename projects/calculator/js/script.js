@@ -16,6 +16,7 @@ class Calculator {
     this.numberButtons = document.querySelectorAll('.button');
     this.operationButtons = document.querySelectorAll('.arithmetic');
     this.equalsButton = document.querySelector('.arithmetic:last-child');
+    this.deleteButton = document.querySelector('.del')
     this.clearButton = document.querySelector('.control');
     this.lightToggle = document.querySelector('.sun');
     this.darkToggle = document.querySelector('.moon');
@@ -51,11 +52,38 @@ class Calculator {
     // Equals and Clear buttons
     this.equalsButton.addEventListener('click', () => this.compute());
     this.clearButton.addEventListener('click', () => this.clear());
+
+    // Delete Button
+    this.deleteButton.addEventListener('click', () => this.delete());
   }
 
   setTheme = theme => {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
+  };
+
+  delete = () => {
+    // If display should be reset, clear everything
+    if (this.shouldResetDisplay) {
+      this.clear();
+      return;
+    }
+
+    if (this.displayString.endsWith(' ')) {
+      // Remove operator and spaces
+      this.displayString = this.displayString.slice(0, -3);
+      this.operation = undefined;
+    } else {
+      // Remove last character
+      this.displayString = this.displayString.slice(0, -1);
+    }
+
+    // If display becomes empty, set to '0'
+    if (this.displayString === '' || this.displayString === '-') {
+      this.displayString = '0';
+    }
+
+    this.updateDisplay();
   };
 
   getOperatorPrecedence = op => {
