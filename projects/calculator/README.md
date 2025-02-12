@@ -1,12 +1,14 @@
-<a href="https://js-calculator.vercel.app">
-  <h1 align="center">Arithmetica</h1>
+<a href="https://arithmetica.vercel.app">
+  <h1 align="center">Calculator</h1>
 </a>
 
 <p align="center">
   A simple calculator for your complex maths.
 </p>
 
-<br>
+<p align=center>
+  <img width = "700px" alt="Jio Network blocking the view? Network switch reveals the magic!" src="./assets/tech-stack.png">
+<p>
 
 <div align= "center">
 
@@ -26,35 +28,79 @@
 
 ## <a name="introduction">❄️&nbsp; Introduction</a>
 
-This repository showcases a simple and efficient **calculator** designed to perform **basic arithmetic operations**. It serves as a quick and handy tool for mathematical calculations with a clean and intuitive interface.
+Arithmatica is a simple, user-friendly calculator designed to tackle complex math with ease. Explore the codebase to discover more.
+
+<br>
+
+<a href="https://arithmetica.vercel.app/">
+  <p align=center>
+    <img width = "650px" alt="Jio Network blocking the view? Network switch reveals the magic!" src="./assets/arithmetica.png">
+  <p>
+</a>
+
+<br>
 
 ## <a name="features">🔋&nbsp; Features</a>
 
-- **Basic Arithmetic Operations**: Perform addition, subtraction, multiplication, and division.
-- **User-Friendly Interface**: Simple and easy-to-use design.
-- **Instant Results**: Get quick and accurate calculations.
-- **Lightweight & Fast**: Minimal resource consumption and optimized for speed.
-- **Keyboard Support**: Use the keyboard for input and operations.
-- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices.
-  <br><br>
+- Lightweight & Fast calculation
+
+- Organized File and Folder Structure
+
+- Well-organized & intuitive UI
+
+- Fully Responsive Design
+
+- Light and Dark Mode Support
+
+<br>
 
 ## <a name="tech-stack">⚙️&nbsp; Tech Stack</a>
 
 - [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML) – structuring
+
 - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) – styling
+
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – functionality
+
 - [Git](https://git-scm.com/) – version control
+
 - [Vite](https://vitejs.dev/) – building
+
 - [Vercel](https://vercel.com/) – deployment
-  <br><br>
+  
+<br>
 
-## Contributing
+## <a name="local-development"> 🖥️&nbsp;&nbsp; Local Development</a>
 
-Contributions are always welcome!
+0.  **Prerequisites** <br>
+    Make sure you have the following installed on your machine:
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md) for ways to get started.
-</br></br>
+    - [Git](https://git-scm.com/)
+    - [Node.js](https://nodejs.org/en) (v20+)
+    - [pnpm](https://pnpm.io/) (Package Manager)
 
-## 🪪&nbsp;&nbsp; Licensing Information
+1.  **Clone the repository:**
 
-This project is licensed under the [MIT License](./LICENSE). Feel free to learn, add upon, and share!
+    ```bash
+    git clone https://github.com/devwithjay/arithmetica.git
+    ```
+
+2.  **Navigate to the project directory:**
+
+    ```bash
+    cd arithmetica
+    ```
+
+3.  **Install dependencies:**
+
+    ```bash
+    pnpm install
+    ```
+
+4.  **Start the App:**
+
+    ```bash
+    pnpm dev
+    ```
+
+    Visit &nbsp;[http://localhost:3000](http://localhost:3000)&nbsp; to access your app.
