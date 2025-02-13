@@ -20,5 +20,16 @@
 */
 
 function objectToArray(obj) {
-  // Convert the object into an array of key-value pairs
+  if (typeof obj !== "object" || obj === null) {
+    return [];
+  }
+
+  return Object.entries(obj);
 }
+
+// Example usage
+console.log(objectToArray({name: "Sarthak", age: 30})); // [['name', 'Sarthak'], ['age', 30]]
+console.log(objectToArray({})); // []
+
+// Export the function
+module.exports = objectToArray;

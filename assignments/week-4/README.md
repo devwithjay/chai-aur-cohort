@@ -10,6 +10,7 @@
 
 <p align="center">
   <a href="#1-prototypes"><strong>Prototypes</strong></a> 
+  ·&nbsp;<a href="#2-objects"><strong>Objects</strong></a> 
 </p>
 
 </br>

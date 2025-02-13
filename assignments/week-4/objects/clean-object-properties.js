@@ -19,5 +19,22 @@
 */
 
 function cleanObject(obj) {
-  // Remove all properties with null or undefined values
+  if (typeof obj !== "object" || obj === null) {
+    return {};
+  }
+
+  for (let key in obj) {
+    if (obj[key] === null || obj[key] === undefined) {
+      delete obj[key];
+    }
+  }
+
+  return obj;
 }
+
+// Example usage
+console.log(cleanObject({name: "Jay", age: null, city: "Sangamner"})); // { name: 'Jay', city: 'Sangamner' }
+console.log(cleanObject({a: undefined, b: null})); // {}
+
+// Export the function
+module.exports = cleanObject;

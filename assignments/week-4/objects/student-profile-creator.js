@@ -23,5 +23,24 @@
 */
 
 function createStudentProfile(name, age, grade) {
-  // Return an object with name, age, and grade
+  if (typeof name !== "string" || name === "") {
+    return "Invalid input";
+  }
+
+  if (typeof age !== "number" || age <= 5 || !Number.isInteger(age)) {
+    return "Invalid input";
+  }
+
+  if (typeof grade !== "string" || grade === "") {
+    return "Invalid input";
+  }
+
+  return {name, age, grade};
 }
+
+// Example usage
+console.log(createStudentProfile("Mukul", 10, "5th")); // { name: 'Mukul', age: 10, grade: '5th' }
+console.log(createStudentProfile("Hitesh", 4, "3rd")); // "Invalid input"
+
+// Export the function
+module.exports = createStudentProfile;

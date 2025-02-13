@@ -18,5 +18,15 @@
 */
 
 function hasDiscount(product) {
-  // Check if product has discount property
+  if (typeof product !== "object" || product === null || !product.discount) {
+    return false;
+  }
+  return true;
 }
+
+// Example usage
+console.log(hasDiscount({price: 100, discount: 20})); // true
+console.log(hasDiscount({price: 50})); // false
+
+// Export the function
+module.exports = hasDiscount;

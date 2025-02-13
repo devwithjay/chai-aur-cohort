@@ -18,5 +18,20 @@
 */
 
 function removePassword(user) {
-  // Remove password property
+  if (typeof user !== "object" || user === null || !user.username) {
+    return "Invalid user";
+  }
+
+  if (user.hasOwnProperty("password")) {
+    delete user.password;
+  }
+
+  return user;
 }
+
+// Example usage
+console.log(removePassword({username: "Onkar", password: "secret"})); // { username: 'Onkar' }
+console.log(removePassword({username: "Anirudh"})); // { username: 'Bob' }
+
+// Export the function
+module.exports = removePassword;

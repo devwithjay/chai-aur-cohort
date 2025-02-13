@@ -21,5 +21,18 @@
 */
 
 function deepClone(obj) {
-  // Return a deep copy of obj
+  if (typeof obj !== "object" || obj === null) {
+    return obj;
+  }
+
+  return JSON.parse(JSON.stringify(obj));
 }
+
+// Example usage
+const original = {name: "Sanket", details: {age: 30, city: "Sangamner"}};
+const cloned = deepClone(original);
+console.log(cloned); // { name: 'Sanket', details: { age: 30, city: 'Sangamner' } }
+console.log(cloned !== original); // true
+
+// Export the function
+module.exports = deepClone;
