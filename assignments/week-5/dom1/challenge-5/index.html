@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Carousel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Image Carousel</h1>
+
+    <div class="carousel-container" id="carousel">
+      <div class="carousel-track" id="carouselTrack">
+        <!-- Images will be added dynamically -->
+      </div>
+
+      <div class="carousel-caption" id="caption"></div>
+
+      <button class="carousel-button prev-button" id="prevButton">←</button>
+      <button class="carousel-button next-button" id="nextButton">→</button>
+    </div>
+
+    <div class="carousel-nav" id="carouselNav">
+      <!-- Indicators will be added dynamically -->
+    </div>
+
+    <div class="auto-play-control">
+      <button class="auto-play-button" id="autoPlayButton">
+        Start Auto Play
+      </button>
+      <span id="timerDisplay"></span>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

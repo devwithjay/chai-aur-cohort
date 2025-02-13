@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task List Application</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Task List</h1>
+
+    <div class="task-form">
+      <input
+        type="text"
+        id="taskInput"
+        class="task-input"
+        placeholder="Add a new task..."
+      />
+      <button id="addButton" class="add-button">Add</button>
+    </div>
+
+    <ul id="taskList" class="task-list">
+      <li class="empty-list">No tasks yet. Add one above!</li>
+    </ul>
+
+    <div class="task-stats">
+      <span id="totalTasks">Total tasks: 0</span>
+      <span id="completedTasks">Completed: 0</span>
+    </div>
+  </body>
+
+  <script src="app.js"></script>
+</html>

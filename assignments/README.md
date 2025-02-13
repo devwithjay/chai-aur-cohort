@@ -22,6 +22,8 @@
 
 - ### [Week 4: Prototype & Object Challenges](./week-4/README.md)
 
+- ### [Week 5: DOM Challenges](./week-5/README.md)
+
   </br>
 
 ## Contributing

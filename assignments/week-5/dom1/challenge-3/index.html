@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real-time Form Input Display</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Profile Form</h1>
+    <p>Enter your information below to see it displayed in real-time:</p>
+
+    <div class="form-container">
+      <div class="form-group">
+        <label for="nameInput">Name:</label>
+        <input type="text" id="nameInput" placeholder="Enter your name" />
+      </div>
+
+      <div class="form-group">
+        <label for="jobInput">Job Title:</label>
+        <input type="text" id="jobInput" placeholder="Enter your job title" />
+      </div>
+
+      <div class="form-group">
+        <label for="ageInput">Age:</label>
+        <input
+          type="number"
+          id="ageInput"
+          min="18"
+          max="120"
+          placeholder="Enter your age"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="bioInput">Bio:</label>
+        <textarea
+          id="bioInput"
+          rows="4"
+          placeholder="Tell us about yourself"
+        ></textarea>
+      </div>
+    </div>
+
+    <div class="preview-card">
+      <h2>Profile Preview</h2>
+      <div class="profile-info">
+        <p><strong>Name:</strong> <span id="nameDisplay">Not provided</span></p>
+        <p>
+          <strong>Job Title:</strong> <span id="jobDisplay">Not provided</span>
+        </p>
+        <p><strong>Age:</strong> <span id="ageDisplay">Not provided</span></p>
+        <p><strong>Bio:</strong> <span id="bioDisplay">Not provided</span></p>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
