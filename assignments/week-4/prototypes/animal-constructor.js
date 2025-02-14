@@ -20,7 +20,7 @@ function Animal(name) {
 }
 
 Animal.prototype.makeSound = function () {
-  return "Some generic sound";
+  return 'Some generic sound';
 };
 
 // Export the function for reuse in other modules

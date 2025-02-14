@@ -9,14 +9,14 @@ function countApples(apples) {
 }
 
 // Please don't remove the code below
-const readline = require("readline");
+const readline = require('readline');
 
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 
-rl.on("line", input => {
+rl.on('line', input => {
   const apples = parseInt(input); // Parse input as a number
   // Call our function
   const result = countApples(apples);

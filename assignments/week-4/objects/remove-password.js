@@ -18,11 +18,11 @@
 */
 
 function removePassword(user) {
-  if (typeof user !== "object" || user === null || !user.username) {
-    return "Invalid user";
+  if (typeof user !== 'object' || user === null || !user.username) {
+    return 'Invalid user';
   }
 
-  if (user.hasOwnProperty("password")) {
+  if (user.hasOwnProperty('password')) {
     delete user.password;
   }
 
@@ -30,8 +30,8 @@ function removePassword(user) {
 }
 
 // Example usage
-console.log(removePassword({username: "Onkar", password: "secret"})); // { username: 'Onkar' }
-console.log(removePassword({username: "Anirudh"})); // { username: 'Bob' }
+console.log(removePassword({username: 'Onkar', password: 'secret'})); // { username: 'Onkar' }
+console.log(removePassword({username: 'Anirudh'})); // { username: 'Bob' }
 
 // Export the function
 module.exports = removePassword;

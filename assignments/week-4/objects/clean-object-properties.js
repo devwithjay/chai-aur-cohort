@@ -19,7 +19,7 @@
 */
 
 function cleanObject(obj) {
-  if (typeof obj !== "object" || obj === null) {
+  if (typeof obj !== 'object' || obj === null) {
     return {};
   }
 
@@ -33,7 +33,7 @@ function cleanObject(obj) {
 }
 
 // Example usage
-console.log(cleanObject({name: "Jay", age: null, city: "Sangamner"})); // { name: 'Jay', city: 'Sangamner' }
+console.log(cleanObject({name: 'Jay', age: null, city: 'Sangamner'})); // { name: 'Jay', city: 'Sangamner' }
 console.log(cleanObject({a: undefined, b: null})); // {}
 
 // Export the function

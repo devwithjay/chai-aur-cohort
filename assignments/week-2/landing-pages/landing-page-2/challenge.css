@@ -1,294 +1,295 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-	font-family: 'Inter', sans-serif;
-	line-height: 1.6;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-		url('./assets/chaicohort.png');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	height: 100vh;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('./assets/chaicohort.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Navbar styles */
 .navbar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background-color: #1a1a1a;
-	padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 1rem;
 }
 
 .logo {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 0.5rem;
-	font-size: 1.25rem;
-	color: #00ff9d;
-	font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  color: #00ff9d;
+  font-weight: 600;
 }
 
 .logo img {
-	border: 2px solid #00ff9d;
-	border-radius: 5rem;
-	width: 2.5rem;
-	height: 2.5rem;
+  border: 2px solid #00ff9d;
+  border-radius: 5rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 /* Hero section styles */
 .hero {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	flex: 1;
-	padding: 1rem;
-	text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 1rem;
+  text-align: center;
 }
 
 .hero-content {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 1rem;
-	padding: 1.5rem 0;
-	width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  width: 90%;
 }
 
 .hero-content h1 {
-	color: #00ff9d;
-	font-size: 1.8rem;
-	letter-spacing: 0.1rem;
-	line-height: 1.1;
+  color: #00ff9d;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.1;
 }
 
 .hero-content p {
-	color: #dddddd;
-	font-size: 1rem;
-	max-width: 90%;
+  color: #dddddd;
+  font-size: 1rem;
+  max-width: 90%;
 }
 
 .hero-content img {
-	border: 2px solid #00ff9d;
-	border-radius: 0.5rem;
-	max-width: 90%;
-	height: auto;
+  border: 2px solid #00ff9d;
+  border-radius: 0.5rem;
+  max-width: 90%;
+  height: auto;
 }
 
 .enroll-button {
-	padding: 0.75rem 2rem;
-	background-color: #00ff9d;
-	border: none;
-	border-radius: 5rem;
-	font-size: 1rem;
-	margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  background-color: #00ff9d;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1rem;
+  margin-top: 1rem;
 }
 
 .enroll-button:hover {
-	cursor: pointer;
-	background-color: #00e28c;
+  cursor: pointer;
+  background-color: #00e28c;
 }
 
 /* Highlights section styles */
 .highlights {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background-color: #1a1a1a;
-	padding: 2rem 1rem;
-	gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 2rem 1rem;
+  gap: 1rem;
 }
 
 .highlight-card {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 0.5rem;
-	padding: 1.5rem;
-	border-radius: 1rem;
-	background-color: #2a2a2a;
-	width: 90%;
-	min-height: 150px;
-	text-align: center;
-	height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: #2a2a2a;
+  width: 90%;
+  min-height: 150px;
+  text-align: center;
+  height: 100%;
 }
 
 .highlight-card h3 {
-	font-size: 1.1rem;
-	color: #00ff9d;
-	margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #00ff9d;
+  margin-bottom: 0.5rem;
 }
 
 .highlight-card p {
-	font-size: 1rem;
-	color: #dddddd;
+  font-size: 1rem;
+  color: #dddddd;
 }
 
 @media screen and (max-width: 768px) {
-	.menu {
-		display: none;
-	}
+  .menu {
+    display: none;
+  }
 }
 
 /* Tablet styles */
 @media screen and (min-width: 768px) {
-	.navbar {
-		flex-direction: row;
-		justify-content: space-between;
-		padding: 1.5rem 3rem;
-	}
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+  }
 
-	.logo {
-		margin-bottom: 0;
-		font-size: 1.3rem;
-	}
+  .logo {
+    margin-bottom: 0;
+    font-size: 1.3rem;
+  }
 
-	.logo img {
-		width: 3rem;
-		height: 3rem;
-	}
+  .logo img {
+    width: 3rem;
+    height: 3rem;
+  }
 
-	.menu {
-		display: flex;
-		align-items: center;
-		gap: 1.5rem;
-		margin-right: 1rem;
-	}
+  .menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-right: 1rem;
+  }
 
-	.menu a {
-		text-decoration: none;
-		color: #fff;
-		font-size: 1rem;
-	}
+  .menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+  }
 
-	.menu a:hover {
-		text-decoration: underline;
-	}
+  .menu a:hover {
+    text-decoration: underline;
+  }
 
-	.menu a {
-		font-size: 1.1rem;
-	}
+  .menu a {
+    font-size: 1.1rem;
+  }
 
-	.hero-content {
-		width: 80%;
-	}
+  .hero-content {
+    width: 80%;
+  }
 
-	.hero-content h1 {
-		font-size: 2.2rem;
-	}
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
 
-	.hero-content p {
-		font-size: 1.1rem;
-		max-width: 80%;
-	}
+  .hero-content p {
+    font-size: 1.1rem;
+    max-width: 80%;
+  }
 
-	.highlights {
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: center;
-		padding: 3rem 2rem;
-		gap: 1.5rem;
-	}
+  .highlights {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 3rem 2rem;
+    gap: 1.5rem;
+  }
 
-	.highlight-card {
-		width: 90%;
-	}
+  .highlight-card {
+    width: 90%;
+  }
 }
 
 /* Desktop styles */
 @media screen and (min-width: 1024px) {
-	.navbar {
-		padding: 2rem 4rem;
-	}
+  .navbar {
+    padding: 2rem 4rem;
+  }
 
-	.logo {
-		font-size: 1.5rem;
-		gap: 0.75rem;
-	}
+  .logo {
+    font-size: 1.5rem;
+    gap: 0.75rem;
+  }
 
-	.logo img {
-		width: 3.5rem;
-		height: 3.5rem;
-	}
+  .logo img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
 
-	.menu {
-		gap: 2rem;
-	}
+  .menu {
+    gap: 2rem;
+  }
 
-	.menu a {
-		font-size: 1.2rem;
-	}
+  .menu a {
+    font-size: 1.2rem;
+  }
 
-	.hero-content {
-		width: 70%;
-		gap: 1.5rem;
-	}
+  .hero-content {
+    width: 70%;
+    gap: 1.5rem;
+  }
 
-	.hero-content h1 {
-		font-size: 2.5rem;
-	}
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
 
-	.hero-content p {
-		font-size: 1.25rem;
-		max-width: 70%;
-	}
+  .hero-content p {
+    font-size: 1.25rem;
+    max-width: 70%;
+  }
 
-	.enroll-button {
-		padding: 1rem 2.75rem;
-		font-size: 1.125rem;
-	}
+  .enroll-button {
+    padding: 1rem 2.75rem;
+    font-size: 1.125rem;
+  }
 
-	.highlights {
-		flex-direction: row;
-		padding: 4rem 6rem;
-		gap: 3rem;
-	}
+  .highlights {
+    flex-direction: row;
+    padding: 4rem 6rem;
+    gap: 3rem;
+  }
 
-	.highlight-card {
-		width: calc(33.333% - 3rem);
-		padding: 2rem;
-	}
+  .highlight-card {
+    width: calc(33.333% - 3rem);
+    padding: 2rem;
+  }
 
-	.highlight-card h3 {
-		font-size: 1.25rem;
-	}
+  .highlight-card h3 {
+    font-size: 1.25rem;
+  }
 
-	.highlight-card p {
-		font-size: 1.125rem;
-	}
+  .highlight-card p {
+    font-size: 1.125rem;
+  }
 }
 
 /* Large desktop styles */
 @media screen and (min-width: 1440px) {
-	.navbar {
-		padding: 2rem 6rem;
-	}
+  .navbar {
+    padding: 2rem 6rem;
+  }
 
-	.hero-content {
-		max-width: 1200px;
-	}
+  .hero-content {
+    max-width: 1200px;
+  }
 
-	.hero-content img {
-		max-width: 85%;
-	}
+  .hero-content img {
+    max-width: 85%;
+  }
 
-	.highlights {
-		padding: 4rem 8rem;
-	}
+  .highlights {
+    padding: 4rem 8rem;
+  }
 
-	.highlight-card {
-		padding: 2.5rem;
-	}
+  .highlight-card {
+    padding: 2.5rem;
+  }
 }

@@ -1,135 +1,140 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-		Ubuntu, Cantarell, sans-serif;
-	line-height: 1.6;
-	color: white;
-	background: linear-gradient(
-		180deg,
-		#10081c 22.06%,
-		#0b0512 70.67%,
-		#000000 100%
-	);
-	background-attachment: fixed;
-	align-items: center;
-	text-align: center;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, sans-serif;
+  line-height: 1.6;
+  color: white;
+  background: linear-gradient(
+    180deg,
+    #10081c 22.06%,
+    #0b0512 70.67%,
+    #000000 100%
+  );
+  background-attachment: fixed;
+  align-items: center;
+  text-align: center;
 }
 
 .hero {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
 }
 
 .announcement {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: auto;
-	height: auto;
-	background-color: #1f1a28;
-	border: solid 1px #36323e;
-	padding: 14px 24px;
-	top: 20%;
-	margin: 0 auto;
-	border-radius: 50px;
-	margin-bottom: 40px;
-	transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  height: auto;
+  background-color: #1f1a28;
+  border: solid 1px #36323e;
+  padding: 14px 24px;
+  top: 20%;
+  margin: 0 auto;
+  border-radius: 50px;
+  margin-bottom: 40px;
+  transition: background-color 0.2s ease;
 }
 
 .announcement:hover {
-	background-color: #2a2436;
+  background-color: #2a2436;
 }
 
 .announcement-link {
-	display: flex;
-	text-align: center;
-	align-items: center;
-	justify-content: center;
-	color: #fff;
-	text-decoration: none;
-	font-weight: 500;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .announcement-link:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .announcement-text {
-	font-size: 24px;
-	font-weight: 400;
-	margin-right: 10px;
+  font-size: 24px;
+  font-weight: 400;
+  margin-right: 10px;
 }
 
 .announcement-button {
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	padding: 15px 24px;
-	background-color: #403651;
-	border-radius: 50px;
-	margin-right: -7px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px 24px;
+  background-color: #403651;
+  border-radius: 50px;
+  margin-right: -7px;
 }
 
 .hero-content {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .hero-title {
-	font-size: 86px;
-	font-weight: 600;
-	margin-bottom: 30px;
-	line-height: 125%;
+  font-size: 86px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  line-height: 125%;
 }
 
 .hero-description {
-	font-size: 26px;
-	color: #b7b7b9;
-	margin-bottom: 45px;
+  font-size: 26px;
+  color: #b7b7b9;
+  margin-bottom: 45px;
 }
 
 .cta-button {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #fff;
-	font-size: 20px;
-	font-weight: 600;
-	text-align: center;
-	text-decoration: none;
-	background: linear-gradient(#325dea 20%, #723eeb 100%, #4951da 100%);
-	padding: 22px 40px;
-	border-radius: 50px;
-	transition: box-shadow 0.3s ease, transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  background: linear-gradient(#325dea 20%, #723eeb 100%, #4951da 100%);
+  padding: 22px 40px;
+  border-radius: 50px;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
 
 .cta-button:hover {
-	cursor: pointer;
-	box-shadow: 0 0 10px rgba(114, 62, 235, 0.6), 0 0 20px rgba(114, 62, 235, 0.4);
-	transform: scale(1.01);
+  cursor: pointer;
+  box-shadow:
+    0 0 10px rgba(114, 62, 235, 0.6),
+    0 0 20px rgba(114, 62, 235, 0.4);
+  transform: scale(1.01);
 }
 
 @media (max-width: 640px) {
-	.hero {
-		padding: 1rem;
-	}
+  .hero {
+    padding: 1rem;
+  }
 
-	.announcement-link {
-		font-size: 0.75rem;
-	}
+  .announcement-link {
+    font-size: 0.75rem;
+  }
 
-	.hero-content {
-		padding: 0 1rem;
-	}
+  .hero-content {
+    padding: 0 1rem;
+  }
 }

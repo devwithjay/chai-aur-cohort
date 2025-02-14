@@ -25,20 +25,20 @@
 
 function getNestedValue(obj, keyPath) {
   if (
-    typeof obj !== "object" ||
+    typeof obj !== 'object' ||
     obj === null ||
-    typeof keyPath !== "string" ||
+    typeof keyPath !== 'string' ||
     !keyPath
   ) {
-    return "Key not found";
+    return 'Key not found';
   }
 
-  const keys = keyPath.split(".");
+  const keys = keyPath.split('.');
   let current = obj;
 
   for (let key of keys) {
     if (current[key] === undefined) {
-      return "Key not found";
+      return 'Key not found';
     }
     current = current[key];
   }
@@ -47,9 +47,9 @@ function getNestedValue(obj, keyPath) {
 }
 
 // Example usage
-const data = {user: {address: {city: "Sangamner"}}};
-console.log(getNestedValue(data, "user.address.city")); // "Sangamner"
-console.log(getNestedValue(data, "user.phone")); // "Key not found"
+const data = {user: {address: {city: 'Sangamner'}}};
+console.log(getNestedValue(data, 'user.address.city')); // "Sangamner"
+console.log(getNestedValue(data, 'user.phone')); // "Key not found"
 
 // Export the function
 module.exports = getNestedValue;

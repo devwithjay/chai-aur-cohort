@@ -18,7 +18,7 @@
 */
 
 function countProperties(user) {
-  if (typeof user !== "object" || user === null) {
+  if (typeof user !== 'object' || user === null) {
     return 0;
   }
 
@@ -26,7 +26,7 @@ function countProperties(user) {
 }
 
 // Example usage
-console.log(countProperties({name: "Nikhil", age: 20})); // 2
+console.log(countProperties({name: 'Nikhil', age: 20})); // 2
 console.log(countProperties({})); // 0
 
 // Export the function

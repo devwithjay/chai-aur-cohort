@@ -46,7 +46,7 @@ You need to create a `Counter` constructor function that initializes a `count` p
 
 - Implement a constructor function `Counter` that initializes `count` to `0`.
 - Attach `increment()` and `decrement()` methods to the prototype.\
-  
+
 #### [Playlist Constructor](./prototypes/playlist-constructor.js)
 
 Create a `Playlist` constructor that initializes with an empty `songs` array. Add a method `addSong(song)` to the prototype that adds a new song to the playlist.
@@ -75,17 +75,19 @@ Create a `BankAccount` constructor that initializes:
 
 Implement the following **methods** on the prototype:
 
-1. `deposit(amount)`:  
+1. `deposit(amount)`:
+
    - Increases the `balance` by the given amount.
    - Adds a transaction log in the format: `"Deposited X"` (where X is the amount).
 
-2. `withdraw(amount)`:  
+2. `withdraw(amount)`:
+
    - Decreases the `balance` by the given amount.
    - Prevents **overdraft** (cannot withdraw if balance is insufficient).
    - If withdrawal is **successful**, log: `"Withdrew X"`.
    - If balance is **insufficient**, log: `"Insufficient balance"`.
 
-3. `getTransactionHistory()`:  
+3. `getTransactionHistory()`:
    - Returns the list of all transactions as an **array of strings** in the order they occurred.
 
 #### Challenge
@@ -139,14 +141,15 @@ You are developing an **online store** system where each product has the followi
 
 Your task is to implement the following methods:
 
-1. **applyDiscount(percent)**  
-   - Reduces the `price` of the product by the given **percentage**.  
-   - The final price should be **rounded to the nearest integer** (use `Math.round`).  
+1. **applyDiscount(percent)**
+
+   - Reduces the `price` of the product by the given **percentage**.
+   - The final price should be **rounded to the nearest integer** (use `Math.round`).
    - Example: If a product costs `$1000` and a **10%** discount is applied, the new price should be **$900**.
 
-2. **purchase(quantity)**  
-   - If the requested `quantity` is **available in stock**, reduce the stock accordingly.  
-   - If **not enough stock** is available, return `"Not enough stock"`.  
+2. **purchase(quantity)**
+   - If the requested `quantity` is **available in stock**, reduce the stock accordingly.
+   - If **not enough stock** is available, return `"Not enough stock"`.
    - Example: If `5` items are in stock and the user buys `3`, the new stock should be `2`.
 
 #### Challenge
@@ -277,7 +280,7 @@ Write a function that **removes all properties with null or undefined values** f
 #### [Deep Clone Object](./objects/deep-clone-object.js)
 
 You are working on a **web application** where objects contain **nested properties**.  
-JavaScript’s built-in assignment (`=`) creates a **shallow copy**, meaning changes to the copied object will also affect the original.  
+JavaScript’s built-in assignment (`=`) creates a **shallow copy**, meaning changes to the copied object will also affect the original.
 
 To prevent this, you need to create a **deep copy** of an object, ensuring that nested objects are also cloned properly.
 
@@ -294,7 +297,7 @@ Write a function that takes an object and returns a **deep copy** of it.
 #### [Get Nested Value from Object](./objects/get-nested-value.js)
 
 In many applications, data is stored in **deeply nested objects**.  
-Accessing a property from a deeply nested object requires multiple checks to avoid errors.  
+Accessing a property from a deeply nested object requires multiple checks to avoid errors.
 
 Instead of manually checking each level, we need a function that **safely retrieves a value** from a nested object using a **dot-separated key path**.
 

@@ -21,7 +21,7 @@
 */
 
 function deepClone(obj) {
-  if (typeof obj !== "object" || obj === null) {
+  if (typeof obj !== 'object' || obj === null) {
     return obj;
   }
 
@@ -29,7 +29,7 @@ function deepClone(obj) {
 }
 
 // Example usage
-const original = {name: "Sanket", details: {age: 30, city: "Sangamner"}};
+const original = {name: 'Sanket', details: {age: 30, city: 'Sangamner'}};
 const cloned = deepClone(original);
 console.log(cloned); // { name: 'Sanket', details: { age: 30, city: 'Sangamner' } }
 console.log(cloned !== original); // true

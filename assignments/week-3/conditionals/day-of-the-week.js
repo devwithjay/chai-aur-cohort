@@ -2,40 +2,40 @@
 function getDayOfWeek(day) {
   switch (day) {
     case 1:
-      return "Monday";
-    
+      return 'Monday';
+
     case 2:
-      return "Tuesday";
-    
+      return 'Tuesday';
+
     case 3:
-      return "Wednesday";
-    
+      return 'Wednesday';
+
     case 4:
-      return "Thrusday";
-    
+      return 'Thrusday';
+
     case 5:
-      return "Friday";
-    
+      return 'Friday';
+
     case 6:
-      return "Saturday";
-    
+      return 'Saturday';
+
     case 7:
-      return "Sunday";
-    
+      return 'Sunday';
+
     default:
-      return "Invalid Day";
+      return 'Invalid Day';
   }
 }
 
 // Please don't remove the code below
-const readline = require("readline");
+const readline = require('readline');
 
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 
-rl.on("line", input => {
+rl.on('line', input => {
   const {day} = JSON.parse(input);
   const result = getDayOfWeek(day);
   process.stdout.write(JSON.stringify(result));

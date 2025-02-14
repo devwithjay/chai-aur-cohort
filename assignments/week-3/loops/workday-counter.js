@@ -4,8 +4,8 @@ function workingDays(days) {
 
   for (let i = 0; i < days.length; i++) {
     if (
-      days[i].toLowerCase() === "saturday" ||
-      days[i].toLowerCase() === "sunday"
+      days[i].toLowerCase() === 'saturday' ||
+      days[i].toLowerCase() === 'sunday'
     ) {
       continue;
     }
@@ -16,14 +16,14 @@ function workingDays(days) {
 }
 
 // Please don't remove the code below
-const readline = require("readline");
+const readline = require('readline');
 
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 
-rl.on("line", input => {
+rl.on('line', input => {
   // Parse input (expected to be a JSON string array of days)
   const days = JSON.parse(input);
 

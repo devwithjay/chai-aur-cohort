@@ -48,7 +48,7 @@ BankAccount.prototype.deposit = function (amount) {
 
 BankAccount.prototype.withdraw = function (amount) {
   if (amount > this.balance) {
-    this.transactions.push("Insufficient balance");
+    this.transactions.push('Insufficient balance');
   } else {
     this.balance -= amount;
     this.transactions.push(`Withdrew ${amount}`);

@@ -18,7 +18,7 @@
 */
 
 function hasDiscount(product) {
-  if (typeof product !== "object" || product === null || !product.discount) {
+  if (typeof product !== 'object' || product === null || !product.discount) {
     return false;
   }
   return true;

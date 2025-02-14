@@ -49,6 +49,7 @@ Create a **task management application** that allows users to add, complete, and
 #### Challenge
 
 ##### Task Management
+
 - Users should be able to:
   - **Add a new task** via an input field and "Add" button or by pressing **Enter**.
   - See each task in a list with:
@@ -56,17 +57,20 @@ Create a **task management application** that allows users to add, complete, and
     - A **delete button** to remove tasks.
 
 ##### Task Completion
+
 - Completed tasks should:
   - Be **visually distinct** (e.g., strikethrough text, different color).
   - Be revertible to an **incomplete state** when unchecked.
 
 ##### Task List State
+
 - Display the message **"No tasks yet. Add one above!"** if no tasks exist.
 - The message should:
   - **Disappear** when a task is added.
   - **Reappear** when all tasks are deleted.
 
 ##### Task Statistics
+
 - Show:
   - The **total number of tasks**.
   - The **number of completed tasks**.
@@ -79,20 +83,24 @@ Create an **image carousel** that allows users to navigate through a set of imag
 #### Challenge
 
 ##### Image Display
+
 - Display **one image at a time** with a **caption** at the bottom.
 
 ##### Navigation Controls
+
 - Provide:
   - A **"Next"** button to move to the next image.
   - A **"Previous"** button to go back to the previous image.
   - **Indicator dots** to navigate to specific images.
 
 ##### Automatic Slideshow
+
 - Implement an **auto-play mode** where images **transition automatically**.
 - Add a **Start/Stop** button for auto-play.
 - Display a **countdown timer** showing seconds remaining before the next image.
 
 ##### Indicators
+
 - Show **navigation dots** below the carousel.
 - The **active image’s indicator** should be **highlighted**.
 - Clicking a dot should **navigate directly** to the corresponding image.

@@ -38,7 +38,7 @@ Library.prototype.addBook = function (book) {
 };
 
 Library.prototype.findBook = function (title) {
-  return this.books.includes(title) ? "Book found" : "Book not found";
+  return this.books.includes(title) ? 'Book found' : 'Book not found';
 };
 
 // Export the function for reuse in other modules

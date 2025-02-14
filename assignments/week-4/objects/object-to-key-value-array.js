@@ -20,7 +20,7 @@
 */
 
 function objectToArray(obj) {
-  if (typeof obj !== "object" || obj === null) {
+  if (typeof obj !== 'object' || obj === null) {
     return [];
   }
 
@@ -28,7 +28,7 @@ function objectToArray(obj) {
 }
 
 // Example usage
-console.log(objectToArray({name: "Sarthak", age: 30})); // [['name', 'Sarthak'], ['age', 30]]
+console.log(objectToArray({name: 'Sarthak', age: 30})); // [['name', 'Sarthak'], ['age', 30]]
 console.log(objectToArray({})); // []
 
 // Export the function

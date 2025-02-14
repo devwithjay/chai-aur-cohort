@@ -6,14 +6,14 @@ function writeLoveLetter(message, name) {
 }
 
 // Please don't remove the code below
-const readline = require("readline");
+const readline = require('readline');
 
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 
-rl.on("line", input => {
+rl.on('line', input => {
   // Parse input (expected to be JSON string format),
   // which should contain message and name
   const {message, name} = JSON.parse(input);

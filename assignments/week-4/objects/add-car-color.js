@@ -20,12 +20,12 @@
 */
 
 function addCarColor(car, color) {
-  if (typeof car !== "object" || car === null || !car.brand || !car.model) {
-    return "Invalid car";
+  if (typeof car !== 'object' || car === null || !car.brand || !car.model) {
+    return 'Invalid car';
   }
 
-  if (typeof color !== "string" || color.trim() === "") {
-    return "Invalid color";
+  if (typeof color !== 'string' || color.trim() === '') {
+    return 'Invalid color';
   }
 
   car.color = color;
@@ -33,8 +33,8 @@ function addCarColor(car, color) {
 }
 
 // Example usage
-console.log(addCarColor({brand: "Toyota", model: "Supra"}, "Silver")); // { brand: 'Toyota', model: 'Supra', color: 'Silver' }
-console.log(addCarColor({}, "Blue")); // "Invalid car"
+console.log(addCarColor({brand: 'Toyota', model: 'Supra'}, 'Silver')); // { brand: 'Toyota', model: 'Supra', color: 'Silver' }
+console.log(addCarColor({}, 'Blue')); // "Invalid car"
 
 // Export the function
 module.exports = addCarColor;

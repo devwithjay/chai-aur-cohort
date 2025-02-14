@@ -10,14 +10,14 @@ function findLargest(a, b, c) {
 }
 
 // Please don't remove the code below
-const readline = require("readline");
+const readline = require('readline');
 
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 
-rl.on("line", input => {
+rl.on('line', input => {
   const {a, b, c} = JSON.parse(input);
   const result = findLargest(a, b, c);
   process.stdout.write(JSON.stringify(result));

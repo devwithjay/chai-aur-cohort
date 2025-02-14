@@ -40,11 +40,11 @@ Write a function that checks if a person is eligible to vote and returns "Eligib
 
 Given a student’s marks, determine their grade based on this scale:
 
-- 90+ → A  
-- 80-89 → B  
-- 70-79 → C  
-- 60-69 → D  
-- Below 60 → F  
+- 90+ → A
+- 80-89 → B
+- 70-79 → C
+- 60-69 → D
+- Below 60 → F
 
 Write a function that returns the corresponding grade using if-else.
 
@@ -58,10 +58,10 @@ Write a function to check if a year is a leap year.
 
 You need to determine what action to take based on traffic light colors:
 
-- "Red" → Stop  
-- "Yellow" → Slow Down  
-- "Green" → Go  
-- "Blue" → Invalid Color  
+- "Red" → Stop
+- "Yellow" → Slow Down
+- "Green" → Go
+- "Blue" → Invalid Color
 
 Write a function that uses switch-case to return the correct action.
 
@@ -85,9 +85,9 @@ Write a function that uses switch-case to convert temperature.
 
 #### [Basic Calculator](./conditionals/basic-calculator.js)
 
-Create a basic calculator that performs +, -, *, / based on user input.
+Create a basic calculator that performs +, -, \*, / based on user input.
 
-Write a function that uses switch-case to perform arithmetic operations.  Handle the edge case of “Cannot divide by zero”.
+Write a function that uses switch-case to perform arithmetic operations. Handle the edge case of “Cannot divide by zero”.
 
 #
 
@@ -148,19 +148,21 @@ You’ve been tasked with designing the perfect shiny diamond rug for Cursh’s 
 Create a function `shinyDiamondRug(n)` that prints a shiny diamond shape made of stars. The number `n` represents the size of the diamond, with the middle of the diamond having `2n - 1` stars.
 
 ### Important Rules:
+
 1️⃣ Each line **must not** have trailing spaces.  
 2️⃣ The output **must not** have an extra newline at the end.
 
 #### Example:
+
 For `n = 4`, the output will look like:
 
-``` 
-   *   
-  ***  
- ***** 
+```
+   *
+  ***
+ *****
 *******
- ***** 
-  ***  
+ *****
+  ***
    *
 ```
 
@@ -171,6 +173,7 @@ You're on a camping trip with your friends, and you all want to set up a starry 
 Create a function `invertedMountain(n)` that prints an inverted mountain made of stars. The number `n` represents the number of stars at the top, and the pattern should reduce by one star each line until only one star is left at the bottom.
 
 #### Example:
+
 For `n = 4`, the output will look like:
 
 ```

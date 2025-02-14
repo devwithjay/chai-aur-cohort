@@ -15,7 +15,7 @@
 - ### [Week 5 : Calculator](./calculator/README.md)
 
   &nbsp;[Repository](https://github.com/devwithjay/arithmetica) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Live Demo](https://arithmetica.vercel.app/)
-  
+
 <br>
 
 ## Contributing

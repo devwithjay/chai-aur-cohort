@@ -67,7 +67,7 @@ Arithmatica is a simple, user-friendly calculator designed to tackle complex mat
 - [Vite](https://vitejs.dev/) – building
 
 - [Vercel](https://vercel.com/) – deployment
-  
+
 <br>
 
 ## <a name="local-development"> 🖥️&nbsp;&nbsp; Local Development</a>

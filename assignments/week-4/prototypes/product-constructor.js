@@ -42,7 +42,7 @@ Product.prototype.applyDiscount = function (percent) {
 };
 
 Product.prototype.purchase = function (quantity) {
-  return quantity <= this.stock ? (this.stock -= quantity) : "Not enough stock";
+  return quantity <= this.stock ? (this.stock -= quantity) : 'Not enough stock';
 };
 
 // Export the function for reuse in other modules

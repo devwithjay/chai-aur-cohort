@@ -1,17 +1,17 @@
 // You just need to implement the findPhone function
 function findPhone(items) {
-  return items.indexOf("Phone");
+  return items.indexOf('Phone');
 }
 
 // Please don't remove the code below
-const readline = require("readline");
+const readline = require('readline');
 
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 
-rl.on("line", input => {
+rl.on('line', input => {
   // Parse input (expected to be JSON string format),
   // which should contain items
   const {items} = JSON.parse(input);
