@@ -5,6 +5,15 @@ body {
   padding: 20px;
   text-align: center;
 }
+
+#body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
 h1 {
   transition: color 0.3s ease;
 }
@@ -14,6 +23,7 @@ h1 {
   gap: 10px;
   margin: 20px 0;
 }
+
 button {
   padding: 10px 15px;
   border: none;
@@ -21,9 +31,11 @@ button {
   cursor: pointer;
   color: white;
 }
+
 #redButton {
   background-color: #e74c3c;
 }
+
 #greenButton {
   background-color: #2ecc71;
 }

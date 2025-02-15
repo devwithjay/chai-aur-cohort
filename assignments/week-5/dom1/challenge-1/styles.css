@@ -8,6 +8,14 @@ body {
   transition: background-color 0.3s ease;
 }
 
+#body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .dark-mode {
   background-color: #333;
   color: white;

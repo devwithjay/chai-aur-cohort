@@ -1,30 +1,41 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  max-width: 800px;
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    sans-serif;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  color: #333;
+  padding: 40px 20px;
+  background-color: #f8fafc;
+  color: #1e293b;
+  line-height: 1.5;
+  margin-top: 2rem;
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 30px;
-  color: #2c3e50;
+  margin-bottom: 40px;
+  color: #0f172a;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
 }
 
 .carousel-container {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 500px;
   overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-track {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   height: 100%;
 }
 
@@ -34,6 +45,17 @@ h1 {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+}
+
+.carousel-slide::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
 }
 
 .carousel-caption {
@@ -41,79 +63,137 @@ h1 {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  padding: 15px;
+  padding: 30px;
   text-align: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  z-index: 1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-nav {
   display: flex;
   justify-content: center;
-  margin-top: 15px;
+  margin-top: 24px;
+  gap: 8px;
 }
 
 .carousel-indicator {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background-color: #bbb;
-  margin: 0 5px;
+  background-color: #cbd5e1;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.carousel-indicator:hover {
+  background-color: #94a3b8;
 }
 
 .carousel-indicator.active {
-  background-color: #3498db;
+  background-color: #3b82f6;
+  transform: scale(1.2);
 }
 
 .carousel-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.9);
   border: none;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.7;
-  transition: opacity 0.3s;
+  opacity: 0;
+  transition: all 0.3s ease;
+  color: #1e293b;
+  backdrop-filter: blur(4px);
 }
 
-.carousel-button:hover {
+.carousel-container:hover .carousel-button {
   opacity: 1;
 }
 
+.carousel-button:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-button:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
 .prev-button {
-  left: 10px;
+  left: 20px;
 }
 
 .next-button {
-  right: 10px;
+  right: 20px;
 }
 
 .auto-play-control {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 24px;
+  gap: 16px;
 }
 
 .auto-play-button {
-  background-color: #3498db;
+  background-color: #3b82f6;
   color: white;
   border: none;
-  padding: 8px 15px;
-  border-radius: 4px;
+  padding: 12px 24px;
+  border-radius: 8px;
   cursor: pointer;
-  margin: 0 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow:
+    0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px -1px rgba(0, 0, 0, 0.1);
 }
 
 .auto-play-button:hover {
-  background-color: #2980b9;
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.auto-play-button:active {
+  transform: translateY(1px);
+}
+
+#timerDisplay {
+  font-size: 0.875rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 400px;
+  }
+
+  .carousel-button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .carousel-caption {
+    padding: 20px;
+    font-size: 1.125rem;
+  }
 }

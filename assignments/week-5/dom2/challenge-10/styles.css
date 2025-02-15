@@ -1,26 +1,71 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #f0f0f0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+#body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: #2c3e50;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.stats {
+  background: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.stats p {
+  margin: 0;
+  font-size: 1.2em;
+  color: #34495e;
+}
+
+.stats span {
+  font-weight: bold;
+  color: #2196f3;
 }
 
 .game-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  margin: 20px;
+  gap: 15px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   perspective: 1000px;
+  max-width: 500px;
+  width: 100%;
 }
 
 .card {
-  width: 100px;
-  height: 100px;
+  aspect-ratio: 1;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 0.5s;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.02);
 }
 
 .card.flipped {
@@ -37,11 +82,13 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 2em;
-  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 
 .card-front {
-  background: #2196f3;
+  background: linear-gradient(135deg, #2196f3, #1976d2);
   color: white;
 }
 
@@ -49,19 +96,46 @@ body {
   background: white;
   transform: rotateY(180deg);
   border: 2px solid #2196f3;
-}
-
-.stats {
-  margin: 20px;
-  text-align: center;
+  font-size: 2.5em;
 }
 
 button {
-  padding: 10px 20px;
-  font-size: 1em;
+  padding: 12px 24px;
+  font-size: 1.1em;
   cursor: pointer;
-  background: #4caf50;
+  background: linear-gradient(135deg, #4caf50, #45a049);
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 500px) {
+  .game-container {
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .card-front,
+  .card-back {
+    font-size: 1.5em;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
 }

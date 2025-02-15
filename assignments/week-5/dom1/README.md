@@ -9,7 +9,7 @@
 Create a webpage featuring a **light bulb** image or representation.  
 Implement a button that **toggles the light bulb** between on and off states.
 
-### Challenge
+#### Challenge
 
 - When the bulb is **on**, it should appear in **yellow or gold** (or any other suitable color) with a **glow effect**.
 
@@ -24,7 +24,7 @@ Implement a button that **toggles the light bulb** between on and off states.
 Create a webpage with a heading that says **"Change My Color!"**.  
 Allow users to change the heading’s text color using buttons.
 
-### Challenge
+#### Challenge
 
 - Add **five buttons**: Red, Green, Blue, Purple (or any four colors of your choice), and Reset.
 
@@ -36,7 +36,7 @@ Allow users to change the heading’s text color using buttons.
 
 Design a **profile form** with fields that display real-time updates in a preview section.
 
-### Challenge
+#### Challenge
 
 - Create a form with the following fields:
   
@@ -58,7 +58,7 @@ Design a **profile form** with fields that display real-time updates in a previe
 
 Create a **task management application** that allows users to add, complete, and delete tasks, along with task statistics.
 
-### Challenge
+#### Challenge
 
 #### Task Management
 
@@ -99,11 +99,11 @@ Create a **task management application** that allows users to add, complete, and
 
 - Statistics should **update dynamically** as tasks are managed.
 
-#### [Image Carousel Application 🖼️](./challenge-5/app.js)
+### [Image Carousel Application 🖼️](./challenge-5/app.js)
 
 Create an **image carousel** that allows users to navigate through a set of images with captions and automatic slideshow functionality.
 
-### Challenge
+#### Challenge
 
 #### Image Display
 

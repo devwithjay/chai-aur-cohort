@@ -8,7 +8,7 @@
 
 Create an **enhanced clock** featuring both a digital and an analog display, with smooth hand movements and a date display.
 
-### Challenges
+#### Challenges
 
 #### Digital Clock Display
 
@@ -52,7 +52,7 @@ Create an **enhanced clock** featuring both a digital and an analog display, wit
 
 Build an **accordion component** with collapsible sections that allows only one section to be open at a time.
 
-### Challenges
+#### Challenges
 
 #### Accordion Structure
 
@@ -98,7 +98,7 @@ Build an **accordion component** with collapsible sections that allows only one 
 
 Create a **shopping cart application** that allows users to add products to a cart, adjust quantities, and view totals.
 
-### Challenges
+#### Challenges
 
 #### Product Display
 
@@ -134,7 +134,7 @@ Create a **shopping cart application** that allows users to add products to a ca
 
 Create a **sliding menu** that opens from the right side with smooth transitions and user-friendly interactions.
 
-### Challenges
+#### Challenges
 
 #### Menu Structure
 
@@ -176,7 +176,7 @@ Create a **sliding menu** that opens from the right side with smooth transitions
 
 Develop a **memory matching card game** with interactive gameplay, move tracking, and a timer.
 
-### Challenges
+#### Challenges
 
 #### Game Setup
 

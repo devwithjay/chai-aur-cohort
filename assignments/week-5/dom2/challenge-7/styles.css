@@ -7,9 +7,10 @@
 
 body {
   min-height: 100vh;
-  display: grid;
-  place-items: center;
-  background: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #e0f7fa, #fce4ec);
 }
 
 .container {
@@ -17,29 +18,36 @@ body {
   max-width: 600px;
   background: white;
   padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
 }
 
 h2 {
-  color: #1a1a1a;
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
   text-align: center;
 }
 
 .accordion-item {
   background: white;
   margin-bottom: 1rem;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
-  border: 1px solid #e1e1e1;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.accordion-item:hover {
+  transform: translateY(-3px);
 }
 
 .accordion-button {
   width: 100%;
-  padding: 1rem;
-  background: #4a90e2;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, #42a5f5, #478ed1);
   color: white;
   border: none;
   text-align: left;
@@ -47,29 +55,32 @@ h2 {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: background 0.3s;
+  border-radius: 12px;
 }
 
 .accordion-button:hover {
-  background: #357abd;
+  background: linear-gradient(135deg, #478ed1, #42a5f5);
 }
 
 .accordion-content {
   max-height: 0;
-  padding: 0 1rem;
-  background: white;
+  padding: 0 1.25rem;
+  background: #fafafa;
   overflow: hidden;
-  transition: all 0.3s ease-out;
+  transition: max-height 0.35s ease;
+  border-bottom: 1px solid #eee;
 }
 
 .accordion-content p {
   padding: 1rem 0;
-  color: #666;
-  line-height: 1.5;
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 .arrow {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s;
 }
 
 .active .arrow {
@@ -77,5 +88,5 @@ h2 {
 }
 
 .active .accordion-content {
-  max-height: 200px;
+  max-height: 250px;
 }
