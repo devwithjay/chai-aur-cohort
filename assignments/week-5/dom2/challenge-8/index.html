@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Simple Shop</h1>
+
+    <div class="products">
+      <div class="product">
+        <img
+          src="https://imgs.search.brave.com/Q8N1hgmCdmKvrapcnNXYFu1xDCgiw1XzYJiQ7ory7VI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA5LzkxLzcxLzg5/LzM2MF9GXzk5MTcx/ODk0M19EVlo5RzJD/SG40NjJlaVVnMmpH/dklCQzNycDNrOElT/WS5qcGc"
+          alt="Product 1"
+        />
+        <h3>T-Shirt</h3>
+        <p>$19.99</p>
+        <button onclick="addToCart('T-Shirt', 19.99)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img
+          src="https://imgs.search.brave.com/icgN7FZcrVNjzmbtHY3-JQYUCgEqOqu6i44LsdXMtNw/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/d2hpdGVob3VzZWJs/YWNrbWFya2V0LmNv/bS9fYXNzZXRzL2Nt/cy92My9hc3NldHMv/Ymx0NmFkMTM5ZjRm/ZTE4YTE1Yi9ibHRh/ZWM5NzhkMzI0NWEx/ODYxLzY3NDVkMTgw/N2RiNGExNDc2YmVj/NWUyOS80XygxNCku/anBnP2ltd2lkdGg9/Mzg0MCZxdWFsaXR5/PTgw"
+          alt="Product 2"
+        />
+        <h3>Jeans</h3>
+        <p>$49.99</p>
+        <button onclick="addToCart('Jeans', 49.99)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img
+          src="https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/1728c1f21fbc41868170e24edb30777e_9366/samba-og-shoes.jpg"
+          alt="Product 3"
+        />
+        <h3>Sneakers</h3>
+        <p>$79.99</p>
+        <button onclick="addToCart('Sneakers', 79.99)">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img
+          src="https://imgs.search.brave.com/5-_HHr1WiVcP9Gxiikg5Pqomy0orJVtFXTEwiovOfx0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTcz/NjI0NDEwL3Bob3Rv/L25ldy15ZWFycy1o/YXQuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPXdBMTF6N1NT/VlhwSjUwakxaQUNF/UzdoWU44SWY4cW5a/eFRVV3lRM1Q4b0k9"
+          alt="Product 4"
+        />
+        <h3>Hat</h3>
+        <p>$24.99</p>
+        <button onclick="addToCart('Hat', 24.99)">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="cart">
+      <h2>Shopping Cart</h2>
+      <div id="cart-items">
+        <div class="empty-cart">Cart is empty</div>
+      </div>
+      <div id="cart-total">
+        <h3>Total: $0.00</h3>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

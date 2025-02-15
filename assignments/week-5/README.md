@@ -9,3 +9,5 @@
 <br>
 
 - ### [DOM Challenges(1-5)](./dom1/README.md)
+
+- ### [DOM Challenges(6-10)](./dom2/README.md)
