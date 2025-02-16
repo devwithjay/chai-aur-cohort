@@ -52,11 +52,23 @@
     <p>
   </a>
 
+<br>
+
 ### [TCP & UDP Protocls](https://blog.devwithjay.com/tcp-udp)
 
   <a href="https://blog.devwithjay.com/tcp-udp">
       <p align=center>
       <img width = "500px" alt="Jio Network blocking the view? Network switch reveals the magic!" src="./assets/b5-banner.png">
+    <p>
+  </a>
+
+<br>
+
+### [HTTP vs HTTPS](https://blog.devwithjay.com/http-vs-https)
+
+  <a href="https://blog.devwithjay.com/http-vs-https">
+      <p align=center>
+      <img width = "500px" alt="Jio Network blocking the view? Network switch reveals the magic!" src="./assets/b6-banner.png">
     <p>
   </a>
 
