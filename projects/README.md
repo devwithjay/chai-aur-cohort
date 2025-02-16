@@ -16,6 +16,8 @@
 
   &nbsp;[Repository](https://github.com/devwithjay/arithmetica) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Live Demo](https://arithmetica.vercel.app/)
 
+- ### [Week 7 : Kanban](./kanban/README.mdi)
+
 <br>
 
 ## Contributing
