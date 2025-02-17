@@ -27,6 +27,8 @@
 
 **Flow Tasker** is a **lightweight and efficient** Kanban board designed to help you **organize tasks** effortlessly. Whether you're managing a personal project or tracking professional workflows, Flow Tasker offers a **clean, responsive, and user-friendly** interface.
 
+<br>
+
 ## <a name="features">🚀 &nbsp; Features</a>
 
 - **Add Tasks**: Create tasks with a **title, description, and priority level**.
@@ -49,3 +51,9 @@
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – functionality
 - [Git](https://git-scm.com/) – version control
 - [Vercel](https://vercel.com/) – deployment
+
+<br>
+
+## 🪪&nbsp;&nbsp; Licensing Information
+
+This project is licensed under the [MIT License](./LICENSE). Feel free to learn, add upon, and share!
