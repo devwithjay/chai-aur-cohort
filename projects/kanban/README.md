@@ -20,6 +20,7 @@
   <a href="#introduction"><strong>Introduction</strong></a> 
 	·&nbsp;<a href="#features"><strong>Features</strong></a> 
 	·&nbsp;<a href="#tech-stack"><strong>Tech Stack</strong></a>
+  ·&nbsp;<a href="#contributing"><strong>Contributing</strong></a>
 </p>
 <br>
 
@@ -53,6 +54,13 @@
 - [Vercel](https://vercel.com/) – deployment
 
 <br>
+
+## Contributing
+
+Contributions are always welcome!
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for ways to get started.
+</br></br>
 
 ## 🪪&nbsp;&nbsp; Licensing Information
 
