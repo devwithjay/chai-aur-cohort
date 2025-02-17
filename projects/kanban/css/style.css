@@ -72,6 +72,109 @@ body {
   border-radius: 5px;
 }
 
+.task-card {
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  cursor: grab;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.task-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+}
+
+.task-desc {
+  font-size: 0.9rem;
+  color: #666;
+  text-align: left;
+}
+
+.task-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.task-priority {
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.priority-low {
+  background: #d4edda;
+  color: #155724;
+}
+
+.priority-medium {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.priority-high {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.task-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.task-actions button {
+  border: none;
+  padding: 5px 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+.edit-task-btn {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.edit-task-btn:hover {
+  background-color: #e0a800;
+}
+
+.delete-task-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-task-btn:hover {
+  background-color: #c82333;
+}
+
+.task-card:active {
+  opacity: 0.7;
+  transform: scale(1.05);
+}
+
 @media (max-width: 1200px) {
   .kanban-board {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -119,5 +222,15 @@ body {
   .kanban-column {
     padding: 10px;
     max-height: 60vh;
+  }
+
+  .task-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .task-actions button {
+    width: 100%;
+    margin-bottom: 5px;
   }
 }
