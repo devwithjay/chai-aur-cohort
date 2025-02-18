@@ -5,81 +5,309 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="./assets/logo.svg" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Kanban</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <title>Kanban Board</title>
   </head>
   <body>
-    <h1 align="center">Kanban Board</h1>
+    <main>
+      <div class="kanban-board">
+        <div class="kanban-column">
+          <div class="column-header">
+            <h3>To Do</h3>
+            <div class="column-actions">
+              <button class="edit-column-btn">
+                <i class="fas fa-pencil-alt"></i>
+              </button>
+              <button class="delete-column-btn">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </div>
+          <div class="task-list">
+            <div class="task-card" draggable="true">
+              <div class="task-header">
+                <h4 class="task-title">Sample Task</h4>
+                <span class="task-priority priority-low">Low</span>
+              </div>
+              <p class="task-desc">This is a description of the task.</p>
+              <div class="task-attachments">
+                <div class="attachment-preview">
+                  <i class="fas fa-file-pdf"></i>
+                  <span class="attachment-name">document.pdf</span>
+                </div>
+              </div>
+              <div class="task-footer">
+                <div class="task-meta">
+                  <span class="due-date"
+                    ><i class="far fa-calendar"></i> Mar 10</span
+                  >
+                  <span class="assignee"><i class="far fa-user"></i> John</span>
+                </div>
+                <div class="task-actions">
+                  <button class="attach-btn" title="Add Attachment">
+                    <i class="fas fa-paperclip"></i>
+                  </button>
+                  <button class="edit-task-btn" title="Edit Task">
+                    <i class="fas fa-pencil-alt"></i>
+                  </button>
+                  <button class="delete-task-btn" title="Delete Task">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
 
-    <div class="kanban-board">
-      <div class="kanban-column">
-        <div class="column-header">
-          <h3>To Do</h3>
-          <div class="column-actions">
-            <button class="edit-column-btn">✏️</button>
-            <button class="delete-column-btn">🗑️</button>
+            <div class="task-card" draggable="true">
+              <div class="task-header">
+                <h4 class="task-title">Research Project</h4>
+                <span class="task-priority priority-high">High</span>
+              </div>
+              <p class="task-desc">
+                Gather resources and prepare initial outline.
+              </p>
+              <div class="task-attachments">
+                <div class="attachment-preview">
+                  <i class="fas fa-file-image"></i>
+                  <span class="attachment-name">mockup.jpg</span>
+                </div>
+                <div class="attachment-preview">
+                  <i class="fas fa-file-word"></i>
+                  <span class="attachment-name">notes.docx</span>
+                </div>
+              </div>
+              <div class="task-footer">
+                <div class="task-meta">
+                  <span class="due-date"
+                    ><i class="far fa-calendar"></i> Mar 15</span
+                  >
+                  <span class="assignee"
+                    ><i class="far fa-user"></i> Sarah</span
+                  >
+                </div>
+                <div class="task-actions">
+                  <button class="attach-btn" title="Add Attachment">
+                    <i class="fas fa-paperclip"></i>
+                  </button>
+                  <button class="edit-task-btn" title="Edit Task">
+                    <i class="fas fa-pencil-alt"></i>
+                  </button>
+                  <button class="delete-task-btn" title="Delete Task">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
+          <button class="add-task-btn">
+            <i class="fas fa-plus"></i> Add Task
+          </button>
         </div>
-        <button class="add-task-btn">+ Add Task</button>
-        <div class="task-list">
-          <div class="task-card" draggable="true">
-            <h4 class="task-title">Sample Task</h4>
-            <p class="task-desc">This is a description of the task.</p>
-            <div class="task-meta">
-              <span class="task-priority priority-low">Low</span>
-            </div>
-            <div class="task-actions">
-              <button class="edit-task-btn">✏️</button>
-              <button class="delete-task-btn">🗑️</button>
+
+        <div class="kanban-column">
+          <div class="column-header">
+            <h3>In Progress</h3>
+            <div class="column-actions">
+              <button class="edit-column-btn">
+                <i class="fas fa-pencil-alt"></i>
+              </button>
+              <button class="delete-column-btn">
+                <i class="fas fa-trash"></i>
+              </button>
             </div>
           </div>
+          <div class="task-list">
+            <div class="task-card" draggable="true">
+              <div class="task-header">
+                <h4 class="task-title">Design Homepage</h4>
+                <span class="task-priority priority-medium">Medium</span>
+              </div>
+              <p class="task-desc">
+                Create wireframes and mockups for the new homepage design.
+              </p>
+              <div class="task-attachments">
+                <div class="attachment-preview">
+                  <i class="fas fa-file-image"></i>
+                  <span class="attachment-name">wireframe.png</span>
+                </div>
+              </div>
+              <div class="task-footer">
+                <div class="task-meta">
+                  <span class="due-date"
+                    ><i class="far fa-calendar"></i> Mar 12</span
+                  >
+                  <span class="assignee"><i class="far fa-user"></i> Alex</span>
+                </div>
+                <div class="task-actions">
+                  <button class="attach-btn" title="Add Attachment">
+                    <i class="fas fa-paperclip"></i>
+                  </button>
+                  <button class="edit-task-btn" title="Edit Task">
+                    <i class="fas fa-pencil-alt"></i>
+                  </button>
+                  <button class="delete-task-btn" title="Delete Task">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="add-task-btn">
+            <i class="fas fa-plus"></i> Add Task
+          </button>
+        </div>
+
+        <div class="kanban-column">
+          <div class="column-header">
+            <h3>Review</h3>
+            <div class="column-actions">
+              <button class="edit-column-btn">
+                <i class="fas fa-pencil-alt"></i>
+              </button>
+              <button class="delete-column-btn">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </div>
+          <div class="task-list">
+            <div class="task-card" draggable="true">
+              <div class="task-header">
+                <h4 class="task-title">Code Refactoring</h4>
+                <span class="task-priority priority-medium">Medium</span>
+              </div>
+              <p class="task-desc">
+                Improve code structure and optimize performance.
+              </p>
+              <div class="task-attachments">
+                <div class="attachment-preview">
+                  <i class="fas fa-file-code"></i>
+                  <span class="attachment-name">refactor.js</span>
+                </div>
+              </div>
+              <div class="task-footer">
+                <div class="task-meta">
+                  <span class="due-date"
+                    ><i class="far fa-calendar"></i> Mar 18</span
+                  >
+                  <span class="assignee"><i class="far fa-user"></i> Mike</span>
+                </div>
+                <div class="task-actions">
+                  <button class="attach-btn" title="Add Attachment">
+                    <i class="fas fa-paperclip"></i>
+                  </button>
+                  <button class="edit-task-btn" title="Edit Task">
+                    <i class="fas fa-pencil-alt"></i>
+                  </button>
+                  <button class="delete-task-btn" title="Delete Task">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="add-task-btn">
+            <i class="fas fa-plus"></i> Add Task
+          </button>
+        </div>
+
+        <div class="kanban-column">
+          <div class="column-header">
+            <h3>Done</h3>
+            <div class="column-actions">
+              <button class="edit-column-btn">
+                <i class="fas fa-pencil-alt"></i>
+              </button>
+              <button class="delete-column-btn">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </div>
+          <div class="task-list">
+            <div class="task-card" draggable="true">
+              <div class="task-header">
+                <h4 class="task-title">Project Setup</h4>
+                <span class="task-priority priority-low">Low</span>
+              </div>
+              <p class="task-desc">
+                Initialize repository and set up project structure.
+              </p>
+              <div class="task-footer">
+                <div class="task-meta">
+                  <span class="due-date"
+                    ><i class="far fa-calendar"></i> Mar 5</span
+                  >
+                  <span class="assignee"><i class="far fa-user"></i> Lisa</span>
+                </div>
+                <div class="task-actions">
+                  <button class="attach-btn" title="Add Attachment">
+                    <i class="fas fa-paperclip"></i>
+                  </button>
+                  <button class="edit-task-btn" title="Edit Task">
+                    <i class="fas fa-pencil-alt"></i>
+                  </button>
+                  <button class="delete-task-btn" title="Delete Task">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="add-task-btn">
+            <i class="fas fa-plus"></i> Add Task
+          </button>
         </div>
       </div>
+    </main>
 
-      <div class="kanban-column">
-        <div class="column-header">
-          <h3>To Do</h3>
-          <div class="column-actions">
-            <button class="edit-column-btn">✏️</button>
-            <button class="delete-column-btn">🗑️</button>
-          </div>
+    <!-- Modals -->
+    <div class="modal" id="task-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Add New Task</h3>
+          <button class="close-modal">&times;</button>
         </div>
-        <button class="add-task-btn">+ Add Task</button>
-      </div>
-
-      <div class="kanban-column">
-        <div class="column-header">
-          <h3>To Do</h3>
-          <div class="column-actions">
-            <button class="edit-column-btn">✏️</button>
-            <button class="delete-column-btn">🗑️</button>
-          </div>
-        </div>
-        <button class="add-task-btn">+ Add Task</button>
-        <div class="task-list">
-          <div class="task-card" draggable="true">
-            <h4 class="task-title">Sample Task</h4>
-            <p class="task-desc">This is a description of the task.</p>
-            <div class="task-meta">
-              <span class="task-priority priority-medium">Medium</span>
+        <div class="modal-body">
+          <form id="task-form">
+            <div class="form-group">
+              <label for="task-title">Title</label>
+              <input type="text" id="task-title" required />
             </div>
-            <div class="task-actions">
-              <button class="edit-task-btn">✏️</button>
-              <button class="delete-task-btn">🗑️</button>
+            <div class="form-group">
+              <label for="task-description">Description</label>
+              <textarea id="task-description"></textarea>
             </div>
-          </div>
+            <div class="form-group">
+              <label for="task-priority">Priority</label>
+              <select id="task-priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="task-due-date">Due Date</label>
+              <input type="date" id="task-due-date" />
+            </div>
+            <div class="form-group">
+              <label for="task-assignee">Assignee</label>
+              <input type="text" id="task-assignee" />
+            </div>
+            <div class="form-group">
+              <label for="task-attachments">Attachments</label>
+              <div class="attachment-input">
+                <input type="file" id="task-attachments" multiple />
+                <button type="button" class="browse-btn">Browse Files</button>
+              </div>
+              <div class="selected-files"></div>
+            </div>
+            <div class="form-actions">
+              <button type="button" class="cancel-btn">Cancel</button>
+              <button type="submit" class="save-btn">Save Task</button>
+            </div>
+          </form>
         </div>
-      </div>
-
-      <div class="kanban-column">
-        <div class="column-header">
-          <h3>To Do</h3>
-          <div class="column-actions">
-            <button class="edit-column-btn">✏️</button>
-            <button class="delete-column-btn">🗑️</button>
-          </div>
-        </div>
-        <button class="add-task-btn">+ Add Task</button>
-        <div class="task-list"></div>
       </div>
     </div>
 
