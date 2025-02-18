@@ -38,28 +38,37 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 10px;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 6px 6px 0 0;
   margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .column-header h3 {
   margin: 0;
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: 1rem;
+  flex-grow: 1;
+  text-align: left;
 }
 
 .add-task-btn {
-  background-color: #007bff;
-  color: white;
+  background-color: white;
+  color: #007bff;
   border: none;
   padding: 5px 10px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: 0.9rem;
+  font-weight: bold;
+  transition: 0.2s;
 }
 
 .add-task-btn:hover {
-  background-color: #0255ae;
+  background-color: #f0f0f0;
 }
 
 .task-list {
@@ -173,6 +182,26 @@ body {
 .task-card:active {
   opacity: 0.7;
   transform: scale(1.05);
+}
+
+.column-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.edit-column-btn,
+.delete-column-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+
+.edit-column-btn:hover,
+.delete-column-btn:hover {
+  color: #d1ecf1;
 }
 
 @media (max-width: 1200px) {
