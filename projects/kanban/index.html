@@ -1,316 +1,413 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="./assets/logo.svg" />
-    <link rel="stylesheet" href="./css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Kanban Board</title>
   </head>
-  <body>
-    <main>
-      <div class="kanban-board">
-        <div class="kanban-column">
-          <div class="column-header">
-            <h3>To Do</h3>
-            <div class="column-actions">
-              <button class="edit-column-btn">
-                <i class="fas fa-pencil-alt"></i>
-              </button>
-              <button class="delete-column-btn">
-                <i class="fas fa-trash"></i>
-              </button>
-            </div>
-          </div>
-          <div class="task-list">
-            <div class="task-card" draggable="true">
-              <div class="task-header">
-                <h4 class="task-title">Sample Task</h4>
-                <span class="task-priority priority-low">Low</span>
-              </div>
-              <p class="task-desc">This is a description of the task.</p>
-              <div class="task-attachments">
-                <div class="attachment-preview">
-                  <i class="fas fa-file-pdf"></i>
-                  <span class="attachment-name">document.pdf</span>
-                </div>
-              </div>
-              <div class="task-footer">
-                <div class="task-meta">
-                  <span class="due-date"
-                    ><i class="far fa-calendar"></i> Mar 10</span
-                  >
-                  <span class="assignee"><i class="far fa-user"></i> John</span>
-                </div>
-                <div class="task-actions">
-                  <button class="attach-btn" title="Add Attachment">
-                    <i class="fas fa-paperclip"></i>
-                  </button>
-                  <button class="edit-task-btn" title="Edit Task">
-                    <i class="fas fa-pencil-alt"></i>
-                  </button>
-                  <button class="delete-task-btn" title="Delete Task">
-                    <i class="fas fa-trash"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
+  <body
+    class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 min-h-screen transition-colors duration-200"
+  >
+    <header
+      class="fixed top-0 left-0 right-0 flex justify-between items-center p-4 md:p-6 bg-white dark:bg-gray-800 shadow-md z-10"
+    >
+      <div class="flex items-center">
+        <span class="text-gray-800 dark:text-white text-sm md:text-base">
+          Developed By
+          <a
+            href="https://devwithjay.com"
+            target="_blank"
+            class="ml-1 font-medium hover:underline decoration-2 underline-offset-4 transition-all duration-300 animate-pulse"
+            >Jay</a
+          >
+        </span>
+      </div>
 
-            <div class="task-card" draggable="true">
-              <div class="task-header">
-                <h4 class="task-title">Research Project</h4>
-                <span class="task-priority priority-high">High</span>
-              </div>
-              <p class="task-desc">
-                Gather resources and prepare initial outline.
-              </p>
-              <div class="task-attachments">
-                <div class="attachment-preview">
-                  <i class="fas fa-file-image"></i>
-                  <span class="attachment-name">mockup.jpg</span>
-                </div>
-                <div class="attachment-preview">
-                  <i class="fas fa-file-word"></i>
-                  <span class="attachment-name">notes.docx</span>
-                </div>
-              </div>
-              <div class="task-footer">
-                <div class="task-meta">
-                  <span class="due-date"
-                    ><i class="far fa-calendar"></i> Mar 15</span
-                  >
-                  <span class="assignee"
-                    ><i class="far fa-user"></i> Sarah</span
-                  >
-                </div>
-                <div class="task-actions">
-                  <button class="attach-btn" title="Add Attachment">
-                    <i class="fas fa-paperclip"></i>
-                  </button>
-                  <button class="edit-task-btn" title="Edit Task">
-                    <i class="fas fa-pencil-alt"></i>
-                  </button>
-                  <button class="delete-task-btn" title="Delete Task">
-                    <i class="fas fa-trash"></i>
-                  </button>
-                </div>
-              </div>
+      <div
+        class="flex items-center justify-around w-20 md:w-28 h-8 md:h-10 bg-gray-100 dark:bg-gray-700 rounded-full px-2 cursor-pointer transition-colors duration-300"
+        id="theme-toggle"
+      >
+        <span class="text-gray-800 dark:text-gray-400">
+          <svg
+            height="20"
+            width="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="md:w-6 md:h-6"
+          >
+            <g id="SVGRepo_iconCarrier">
+              <circle
+                cx="12"
+                cy="12"
+                r="5"
+                stroke="currentColor"
+                stroke-width="2"
+              ></circle>
+              <path
+                d="M12 2V4"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              ></path>
+              <path
+                d="M12 20V22"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              ></path>
+              <path
+                d="M4 12L2 12"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              ></path>
+              <path
+                d="M22 12L20 12"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              ></path>
+              <path
+                d="M19.7778 4.22266L17.5558 6.25424"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              ></path>
+              <path
+                d="M4.22217 4.22266L6.44418 6.25424"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              ></path>
+              <path
+                d="M6.44434 17.5557L4.22211 19.7779"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              ></path>
+              <path
+                d="M19.7778 19.7773L17.5558 17.5551"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              ></path>
+            </g>
+          </svg>
+        </span>
+        <span class="text-gray-400 dark:text-white">
+          <svg
+            height="20"
+            width="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="md:w-6 md:h-6"
+          >
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M3.32031 11.6835C3.32031 16.6541 7.34975 20.6835 12.3203 20.6835C16.1075 20.6835 19.3483 18.3443 20.6768 15.032C19.6402 15.4486 18.5059 15.6834 17.3203 15.6834C12.3497 15.6834 8.32031 11.654 8.32031 6.68342C8.32031 5.50338 8.55165 4.36259 8.96453 3.32996C5.65605 4.66028 3.32031 7.89912 3.32031 11.6835Z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </g>
+          </svg>
+        </span>
+      </div>
+    </header>
+
+    <div
+      class="fixed bottom-4 right-4 md:bottom-8 md:right-12 w-8 h-8 md:w-10 md:h-10"
+    >
+      <a
+        href="https://github.com/devwithjay/arithmetica"
+        target="_blank"
+        class="block"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          class="w-full h-full fill-gray-800 dark:fill-white animate-pulse"
+        >
+          <path
+            d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.5 11.5 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12"
+          />
+        </svg>
+      </a>
+    </div>
+
+    <main class="pt-20 p-4 md:p-6 max-w-7xl mx-auto">
+      <div
+        class="grid mt-40 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
+      >
+        <div
+          class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col"
+        >
+          <div
+            class="bg-primary text-white p-3 flex justify-between items-center"
+          >
+            <h3 class="font-semibold text-base">To Do</h3>
+            <div class="flex space-x-1">
+              <button
+                class="text-white hover:bg-white/20 p-1 rounded transition-colors"
+              >
+                <i class="fas fa-pencil-alt text-sm"></i>
+              </button>
+              <button
+                class="text-white hover:bg-white/20 p-1 rounded transition-colors"
+              >
+                <i class="fas fa-trash text-sm"></i>
+              </button>
             </div>
           </div>
-          <button class="add-task-btn">
-            <i class="fas fa-plus"></i> Add Task
+
+          <div
+            class="bg-gray-100 dark:bg-gray-700 flex-grow p-3 overflow-y-auto max-h-[70vh] space-y-3"
+          ></div>
+
+          <button
+            class="m-3 py-2 px-4 bg-gray-100 dark:bg-gray-700 text-primary border border-dashed border-primary-light rounded hover:bg-primary-light hover:text-white hover:border-solid transition-all flex items-center justify-center gap-2"
+          >
+            <i class="fas fa-plus text-sm"></i>
+            Add Task
           </button>
         </div>
 
-        <div class="kanban-column">
-          <div class="column-header">
-            <h3>In Progress</h3>
-            <div class="column-actions">
-              <button class="edit-column-btn">
-                <i class="fas fa-pencil-alt"></i>
+        <div
+          class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col"
+        >
+          <div
+            class="bg-primary text-white p-3 flex justify-between items-center"
+          >
+            <h3 class="font-semibold text-base">In Progress</h3>
+            <div class="flex space-x-1">
+              <button
+                class="text-white hover:bg-white/20 p-1 rounded transition-colors"
+              >
+                <i class="fas fa-pencil-alt text-sm"></i>
               </button>
-              <button class="delete-column-btn">
-                <i class="fas fa-trash"></i>
+              <button
+                class="text-white hover:bg-white/20 p-1 rounded transition-colors"
+              >
+                <i class="fas fa-trash text-sm"></i>
               </button>
             </div>
           </div>
-          <div class="task-list">
-            <div class="task-card" draggable="true">
-              <div class="task-header">
-                <h4 class="task-title">Design Homepage</h4>
-                <span class="task-priority priority-medium">Medium</span>
-              </div>
-              <p class="task-desc">
-                Create wireframes and mockups for the new homepage design.
-              </p>
-              <div class="task-attachments">
-                <div class="attachment-preview">
-                  <i class="fas fa-file-image"></i>
-                  <span class="attachment-name">wireframe.png</span>
-                </div>
-              </div>
-              <div class="task-footer">
-                <div class="task-meta">
-                  <span class="due-date"
-                    ><i class="far fa-calendar"></i> Mar 12</span
-                  >
-                  <span class="assignee"><i class="far fa-user"></i> Alex</span>
-                </div>
-                <div class="task-actions">
-                  <button class="attach-btn" title="Add Attachment">
-                    <i class="fas fa-paperclip"></i>
-                  </button>
-                  <button class="edit-task-btn" title="Edit Task">
-                    <i class="fas fa-pencil-alt"></i>
-                  </button>
-                  <button class="delete-task-btn" title="Delete Task">
-                    <i class="fas fa-trash"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="add-task-btn">
-            <i class="fas fa-plus"></i> Add Task
+
+          <div
+            class="bg-gray-100 dark:bg-gray-700 flex-grow p-3 overflow-y-auto max-h-[70vh] space-y-3"
+          ></div>
+
+          <button
+            class="m-3 py-2 px-4 bg-gray-100 dark:bg-gray-700 text-primary border border-dashed border-primary-light rounded hover:bg-primary-light hover:text-white hover:border-solid transition-all flex items-center justify-center gap-2"
+          >
+            <i class="fas fa-plus text-sm"></i>
+            Add Task
           </button>
         </div>
 
-        <div class="kanban-column">
-          <div class="column-header">
-            <h3>Review</h3>
-            <div class="column-actions">
-              <button class="edit-column-btn">
-                <i class="fas fa-pencil-alt"></i>
+        <div
+          class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col"
+        >
+          <div
+            class="bg-primary text-white p-3 flex justify-between items-center"
+          >
+            <h3 class="font-semibold text-base">Review</h3>
+            <div class="flex space-x-1">
+              <button
+                class="text-white hover:bg-white/20 p-1 rounded transition-colors"
+              >
+                <i class="fas fa-pencil-alt text-sm"></i>
               </button>
-              <button class="delete-column-btn">
-                <i class="fas fa-trash"></i>
+              <button
+                class="text-white hover:bg-white/20 p-1 rounded transition-colors"
+              >
+                <i class="fas fa-trash text-sm"></i>
               </button>
             </div>
           </div>
-          <div class="task-list">
-            <div class="task-card" draggable="true">
-              <div class="task-header">
-                <h4 class="task-title">Code Refactoring</h4>
-                <span class="task-priority priority-medium">Medium</span>
-              </div>
-              <p class="task-desc">
-                Improve code structure and optimize performance.
-              </p>
-              <div class="task-attachments">
-                <div class="attachment-preview">
-                  <i class="fas fa-file-code"></i>
-                  <span class="attachment-name">refactor.js</span>
-                </div>
-              </div>
-              <div class="task-footer">
-                <div class="task-meta">
-                  <span class="due-date"
-                    ><i class="far fa-calendar"></i> Mar 18</span
-                  >
-                  <span class="assignee"><i class="far fa-user"></i> Mike</span>
-                </div>
-                <div class="task-actions">
-                  <button class="attach-btn" title="Add Attachment">
-                    <i class="fas fa-paperclip"></i>
-                  </button>
-                  <button class="edit-task-btn" title="Edit Task">
-                    <i class="fas fa-pencil-alt"></i>
-                  </button>
-                  <button class="delete-task-btn" title="Delete Task">
-                    <i class="fas fa-trash"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="add-task-btn">
-            <i class="fas fa-plus"></i> Add Task
+
+          <div
+            class="bg-gray-100 dark:bg-gray-700 flex-grow p-3 overflow-y-auto max-h-[70vh] space-y-3"
+          ></div>
+
+          <button
+            class="m-3 py-2 px-4 bg-gray-100 dark:bg-gray-700 text-primary border border-dashed border-primary-light rounded hover:bg-primary-light hover:text-white hover:border-solid transition-all flex items-center justify-center gap-2"
+          >
+            <i class="fas fa-plus text-sm"></i>
+            Add Task
           </button>
         </div>
 
-        <div class="kanban-column">
-          <div class="column-header">
-            <h3>Done</h3>
-            <div class="column-actions">
-              <button class="edit-column-btn">
-                <i class="fas fa-pencil-alt"></i>
+        <div
+          class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col"
+        >
+          <div
+            class="bg-primary text-white p-3 flex justify-between items-center"
+          >
+            <h3 class="font-semibold text-base">Done</h3>
+            <div class="flex space-x-1">
+              <button
+                class="text-white hover:bg-white/20 p-1 rounded transition-colors"
+              >
+                <i class="fas fa-pencil-alt text-sm"></i>
               </button>
-              <button class="delete-column-btn">
-                <i class="fas fa-trash"></i>
+              <button
+                class="text-white hover:bg-white/20 p-1 rounded transition-colors"
+              >
+                <i class="fas fa-trash text-sm"></i>
               </button>
             </div>
           </div>
-          <div class="task-list">
-            <div class="task-card" draggable="true">
-              <div class="task-header">
-                <h4 class="task-title">Project Setup</h4>
-                <span class="task-priority priority-low">Low</span>
-              </div>
-              <p class="task-desc">
-                Initialize repository and set up project structure.
-              </p>
-              <div class="task-footer">
-                <div class="task-meta">
-                  <span class="due-date"
-                    ><i class="far fa-calendar"></i> Mar 5</span
-                  >
-                  <span class="assignee"><i class="far fa-user"></i> Lisa</span>
-                </div>
-                <div class="task-actions">
-                  <button class="attach-btn" title="Add Attachment">
-                    <i class="fas fa-paperclip"></i>
-                  </button>
-                  <button class="edit-task-btn" title="Edit Task">
-                    <i class="fas fa-pencil-alt"></i>
-                  </button>
-                  <button class="delete-task-btn" title="Delete Task">
-                    <i class="fas fa-trash"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="add-task-btn">
-            <i class="fas fa-plus"></i> Add Task
+
+          <div
+            class="bg-gray-100 dark:bg-gray-700 flex-grow p-3 overflow-y-auto max-h-[70vh] space-y-3"
+          ></div>
+
+          <button
+            class="m-3 py-2 px-4 bg-gray-100 dark:bg-gray-700 text-primary border border-dashed border-primary-light rounded hover:bg-primary-light hover:text-white hover:border-solid transition-all flex items-center justify-center gap-2"
+          >
+            <i class="fas fa-plus text-sm"></i>
+            Add Task
           </button>
         </div>
       </div>
     </main>
 
-    <!-- Modals -->
-    <div class="modal" id="task-modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3>Add New Task</h3>
-          <button class="close-modal">&times;</button>
+    <div
+      id="task-modal"
+      class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4"
+    >
+      <div
+        class="bg-white dark:bg-gray-800 rounded-lg shadow-lg w-full max-w-md overflow-hidden"
+      >
+        <div
+          class="p-4 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center"
+        >
+          <h3 class="font-medium text-gray-900 dark:text-white">
+            Add New Task
+          </h3>
+          <button
+            class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+          >
+            &times;
+          </button>
         </div>
-        <div class="modal-body">
+        <div class="p-4">
           <form id="task-form">
-            <div class="form-group">
-              <label for="task-title">Title</label>
-              <input type="text" id="task-title" required />
+            <div class="mb-4">
+              <label
+                for="task-title"
+                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                >Title</label
+              >
+              <input
+                type="text"
+                id="task-title"
+                class="w-full px-3 py-2 text-sm rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-primary"
+                required
+              />
             </div>
-            <div class="form-group">
-              <label for="task-description">Description</label>
-              <textarea id="task-description"></textarea>
+            <div class="mb-4">
+              <label
+                for="task-description"
+                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                >Description</label
+              >
+              <textarea
+                id="task-description"
+                rows="3"
+                class="w-full px-3 py-2 text-sm rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-primary"
+              ></textarea>
             </div>
-            <div class="form-group">
-              <label for="task-priority">Priority</label>
-              <select id="task-priority">
+            <div class="mb-4">
+              <label
+                for="task-priority"
+                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                >Priority</label
+              >
+              <select
+                id="task-priority"
+                class="w-full px-3 py-2 text-sm rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-primary"
+              >
                 <option value="low">Low</option>
                 <option value="medium">Medium</option>
                 <option value="high">High</option>
               </select>
             </div>
-            <div class="form-group">
-              <label for="task-due-date">Due Date</label>
-              <input type="date" id="task-due-date" />
+            <div class="mb-4">
+              <label
+                for="task-due-date"
+                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                >Due Date</label
+              >
+              <input
+                type="date"
+                id="task-due-date"
+                class="w-full px-3 py-2 text-sm rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-primary"
+              />
             </div>
-            <div class="form-group">
-              <label for="task-assignee">Assignee</label>
-              <input type="text" id="task-assignee" />
+            <div class="mb-4">
+              <label
+                for="task-assignee"
+                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                >Assignee</label
+              >
+              <input
+                type="text"
+                id="task-assignee"
+                class="w-full px-3 py-2 text-sm rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-primary"
+              />
             </div>
-            <div class="form-group">
-              <label for="task-attachments">Attachments</label>
-              <div class="attachment-input">
-                <input type="file" id="task-attachments" multiple />
-                <button type="button" class="browse-btn">Browse Files</button>
+            <div class="mb-4">
+              <label
+                for="task-attachments"
+                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                >Attachments</label
+              >
+              <div class="flex items-center">
+                <input
+                  type="file"
+                  id="task-attachments"
+                  class="hidden"
+                  multiple
+                />
+                <button
+                  type="button"
+                  class="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+                >
+                  Browse Files
+                </button>
               </div>
-              <div class="selected-files"></div>
+              <div class="mt-2 selected-files"></div>
             </div>
-            <div class="form-actions">
-              <button type="button" class="cancel-btn">Cancel</button>
-              <button type="submit" class="save-btn">Save Task</button>
+            <div class="flex justify-end space-x-4 mt-6">
+              <button
+                type="button"
+                class="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                class="px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors"
+              >
+                Save Task
+              </button>
             </div>
           </form>
         </div>
       </div>
     </div>
 
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="./js/script.js"></script>
   </body>
 </html>
