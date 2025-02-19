@@ -17,6 +17,7 @@
   --emerald-light: #34d399;
 }
 
+/* Make scrollbars more appealing */
 .task-list::-webkit-scrollbar {
   width: 6px;
 }
@@ -44,6 +45,36 @@
 }
 
 .dark .task-list::-webkit-scrollbar-thumb:hover {
+  background-color: #6b7280;
+}
+
+::-webkit-scrollbar {
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f3f4f6;
+  border-radius: 8px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background-color: #374151;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 8px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background-color: #4b5563;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #9ca3af;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
   background-color: #6b7280;
 }
 
@@ -150,47 +181,21 @@
   }
 }
 
-.grid {
-  display: grid;
-  grid-auto-rows: 1fr;
-}
-
-.grid > div {
-  height: auto;
-  display: flex;
-  flex-direction: column;
-}
-
 @media (max-width: 639px) {
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
   .task-list {
-    max-height: 50vh;
+    max-height: calc(100vh - 180px);
   }
 }
 
 @media (min-width: 640px) and (max-width: 1023px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
   .task-list {
-    max-height: 60vh;
+    max-height: calc(100vh - 190px);
   }
 }
 
 @media (min-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-  }
-
   .task-list {
-    max-height: 70vh;
+    max-height: calc(100vh - 200px);
   }
 }
 
@@ -228,4 +233,57 @@
   button {
     font-size: 16px;
   }
+}
+
+.bg-gradient-to-r.from-indigo-600.to-violet-500,
+.bg-gradient-to-r.from-indigo-700.to-violet-600 {
+  background: #5c6bc0;
+}
+
+.bg-gradient-to-r.from-blue-500.to-cyan-500,
+.bg-gradient-to-r.from-blue-600.to-cyan-600 {
+  background: #42a5f5;
+}
+
+.bg-gradient-to-r.from-amber-500.to-orange-500,
+.bg-gradient-to-r.from-amber-600.to-orange-600 {
+  background: #ffb300;
+}
+
+.bg-gradient-to-r.from-emerald-500.to-teal-500,
+.bg-gradient-to-r.from-emerald-600.to-teal-600 {
+  background: #26a69a;
+}
+
+.dark input[type='date']::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.hover\:bg-indigo-50:hover {
+  background-color: rgba(92, 107, 192, 0.1);
+}
+.hover\:bg-blue-50:hover {
+  background-color: rgba(66, 165, 245, 0.1);
+}
+.hover\:bg-amber-50:hover {
+  background-color: rgba(255, 179, 0, 0.1);
+}
+.hover\:bg-emerald-50:hover {
+  background-color: rgba(38, 166, 154, 0.1);
+}
+
+.dark .hover\:bg-indigo-900\/30:hover {
+  background-color: rgba(92, 107, 192, 0.3);
+}
+
+.dark .hover\:bg-blue-900\/30:hover {
+  background-color: rgba(66, 165, 245, 0.3);
+}
+
+.dark .hover\:bg-amber-900\/30:hover {
+  background-color: rgba(255, 179, 0, 0.3);
+}
+
+.dark .hover\:bg-emerald-900\/30:hover {
+  background-color: rgba(38, 166, 154, 0.3);
 }

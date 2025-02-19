@@ -12,10 +12,10 @@
     <title>Kanban Board</title>
   </head>
   <body
-    class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 min-h-screen transition-colors duration-200"
+    class="h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-200 overflow-hidden"
   >
     <header
-      class="fixed top-0 left-0 right-0 flex justify-between items-center p-4 md:p-8 bg-white dark:bg-gray-800 shadow-md z-10"
+      class="flex justify-between items-center p-4 md:p-8 z-10 max-w-7xl mx-auto w-full"
     >
       <div class="flex items-center">
         <span
@@ -32,7 +32,7 @@
       </div>
 
       <div
-        class="flex items-center justify-around w-20 md:w-28 h-8 md:h-10 lg:h-11 bg-gray-100 dark:bg-gray-700 rounded-full px-2 cursor-pointer transition-colors duration-300"
+        class="flex items-center justify-around w-20 md:w-28 h-8 md:h-10 lg:h-11 rounded-full px-2 cursor-pointer transition-colors duration-300"
         id="theme-toggle"
       >
         <span class="text-gray-800 dark:text-gray-400">
@@ -126,17 +126,19 @@
       </div>
     </header>
 
-    <main class="pt-20 p-4 md:p-6 max-w-7xl mx-auto">
+    <main
+      class="h-[calc(100vh-86px)] p-4 md:p-6 overflow-hidden max-w-7xl mx-auto w-full"
+    >
       <div
-        class="grid mt-8 sm:mt-16 md:mt-24 lg:mt-32 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
+        class="flex flex-nowrap gap-4 md:gap-6 w-full h-full overflow-x-auto overflow-y-hidden pb-4"
       >
         <div
-          class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col h-full"
+          class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col min-w-[320px] max-w-[320px] flex-shrink-0 h-full"
         >
           <div
-            class="bg-gradient-to-r from-indigo-600 to-violet-500 dark:from-indigo-700 dark:to-violet-600 text-white p-3 flex justify-between items-center"
+            class="bg-gradient-to-r from-indigo-600 to-violet-500 dark:from-indigo-700 dark:to-violet-600 text-white p-3 flex justify-between items-center flex-shrink-0"
           >
-            <h3 class="font-semibold text-base">To Do</h3>
+            <h3 class="font-semibold text-sm md:text-base">To Do</h3>
             <div class="flex space-x-1">
               <button
                 class="text-white hover:bg-white/20 p-1 rounded transition-colors"
@@ -152,24 +154,26 @@
           </div>
 
           <div
-            class="task-list bg-gray-50 dark:bg-gray-700 flex-grow p-3 overflow-y-auto max-h-[70vh] space-y-3"
+            class="task-list flex-grow bg-gray-50 dark:bg-gray-700 p-3 overflow-y-auto space-y-3 h-full"
           ></div>
 
-          <button
-            class="m-3 py-2 px-4 bg-gray-50 dark:bg-gray-700 text-indigo-600 dark:text-indigo-400 border border-dashed border-indigo-300 dark:border-indigo-500 rounded-md hover:bg-indigo-50 dark:hover:bg-indigo-900/30 hover:text-indigo-700 dark:hover:text-indigo-300 hover:border-solid transition-all flex items-center justify-center gap-2"
-          >
-            <i class="fas fa-plus text-sm"></i>
-            Add Task
-          </button>
+          <div class="flex-shrink-0 p-3">
+            <button
+              class="w-full py-2 px-4 bg-gray-50 dark:bg-gray-700 text-indigo-600 dark:text-indigo-400 border border-dashed border-indigo-300 dark:border-indigo-500 rounded-md hover:bg-indigo-50 dark:hover:bg-indigo-900/30 hover:text-indigo-700 dark:hover:text-indigo-300 hover:border-solid transition-all flex items-center justify-center gap-2"
+            >
+              <i class="fas fa-plus text-sm"></i>
+              Add Task
+            </button>
+          </div>
         </div>
 
         <div
-          class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col h-full"
+          class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col min-w-[320px] flex-shrink-0 h-full"
         >
           <div
-            class="bg-gradient-to-r from-blue-500 to-cyan-500 dark:from-blue-600 dark:to-cyan-600 text-white p-3 flex justify-between items-center"
+            class="bg-gradient-to-r from-blue-500 to-cyan-500 dark:from-blue-600 dark:to-cyan-600 text-white p-3 flex justify-between items-center flex-shrink-0"
           >
-            <h3 class="font-semibold text-base">In Progress</h3>
+            <h3 class="font-semibold text-sm md:text-base">In Progress</h3>
             <div class="flex space-x-1">
               <button
                 class="text-white hover:bg-white/20 p-1 rounded transition-colors"
@@ -185,24 +189,26 @@
           </div>
 
           <div
-            class="task-list bg-gray-50 dark:bg-gray-700 flex-grow p-3 overflow-y-auto max-h-[70vh] space-y-3"
+            class="task-list bg-gray-50 dark:bg-gray-700 flex-grow p-3 overflow-y-auto space-y-3 h-full"
           ></div>
 
-          <button
-            class="m-3 py-2 px-4 bg-gray-50 dark:bg-gray-700 text-blue-600 dark:text-blue-400 border border-dashed border-blue-300 dark:border-blue-500 rounded-md hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:text-blue-700 dark:hover:text-blue-300 hover:border-solid transition-all flex items-center justify-center gap-2"
-          >
-            <i class="fas fa-plus text-sm"></i>
-            Add Task
-          </button>
+          <div class="flex-shrink-0 p-3">
+            <button
+              class="w-full py-2 px-4 bg-gray-50 dark:bg-gray-700 text-blue-600 dark:text-blue-400 border border-dashed border-blue-300 dark:border-blue-500 rounded-md hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:text-blue-700 dark:hover:text-blue-300 hover:border-solid transition-all flex items-center justify-center gap-2"
+            >
+              <i class="fas fa-plus text-sm"></i>
+              Add Task
+            </button>
+          </div>
         </div>
 
         <div
-          class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col h-full"
+          class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col min-w-[320px] flex-shrink-0 h-full"
         >
           <div
-            class="bg-gradient-to-r from-amber-500 to-orange-500 dark:from-amber-600 dark:to-orange-600 text-white p-3 flex justify-between items-center"
+            class="bg-gradient-to-r from-amber-500 to-orange-500 dark:from-amber-600 dark:to-orange-600 text-white p-3 flex justify-between items-center flex-shrink-0"
           >
-            <h3 class="font-semibold text-base">Review</h3>
+            <h3 class="font-semibold text-sm md:text-base">Review</h3>
             <div class="flex space-x-1">
               <button
                 class="text-white hover:bg-white/20 p-1 rounded transition-colors"
@@ -218,24 +224,26 @@
           </div>
 
           <div
-            class="task-list bg-gray-50 dark:bg-gray-700 flex-grow p-3 overflow-y-auto max-h-[70vh] space-y-3"
+            class="task-list bg-gray-50 dark:bg-gray-700 flex-grow p-3 overflow-y-auto space-y-3 h-full"
           ></div>
 
-          <button
-            class="m-3 py-2 px-4 bg-gray-50 dark:bg-gray-700 text-amber-600 dark:text-amber-400 border border-dashed border-amber-300 dark:border-amber-500 rounded-md hover:bg-amber-50 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 hover:border-solid transition-all flex items-center justify-center gap-2"
-          >
-            <i class="fas fa-plus text-sm"></i>
-            Add Task
-          </button>
+          <div class="flex-shrink-0 p-3">
+            <button
+              class="w-full py-2 px-4 bg-gray-50 dark:bg-gray-700 text-amber-600 dark:text-amber-400 border border-dashed border-amber-300 dark:border-amber-500 rounded-md hover:bg-amber-50 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 hover:border-solid transition-all flex items-center justify-center gap-2"
+            >
+              <i class="fas fa-plus text-sm"></i>
+              Add Task
+            </button>
+          </div>
         </div>
 
         <div
-          class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col h-full"
+          class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col min-w-[320px] flex-shrink-0 h-full"
         >
           <div
-            class="bg-gradient-to-r from-emerald-500 to-teal-500 dark:from-emerald-600 dark:to-teal-600 text-white p-3 flex justify-between items-center"
+            class="bg-gradient-to-r from-emerald-500 to-teal-500 dark:from-emerald-600 dark:to-teal-600 text-white p-3 flex justify-between items-center flex-shrink-0"
           >
-            <h3 class="font-semibold text-base">Done</h3>
+            <h3 class="font-semibold text-sm md:text-base">Done</h3>
             <div class="flex space-x-1">
               <button
                 class="text-white hover:bg-white/20 p-1 rounded transition-colors"
@@ -251,22 +259,22 @@
           </div>
 
           <div
-            class="task-list bg-gray-50 dark:bg-gray-700 flex-grow p-3 overflow-y-auto max-h-[70vh] space-y-3"
+            class="task-list bg-gray-50 dark:bg-gray-700 flex-grow p-3 overflow-y-auto space-y-3 h-full"
           ></div>
 
-          <button
-            class="m-3 py-2 px-4 bg-gray-50 dark:bg-gray-700 text-emerald-600 dark:text-emerald-400 border border-dashed border-emerald-300 dark:border-emerald-500 rounded-md hover:bg-emerald-50 dark:hover:bg-emerald-900/30 hover:text-emerald-700 dark:hover:text-emerald-300 hover:border-solid transition-all flex items-center justify-center gap-2"
-          >
-            <i class="fas fa-plus text-sm"></i>
-            Add Task
-          </button>
+          <div class="flex-shrink-0 p-3">
+            <button
+              class="w-full py-2 px-4 bg-gray-50 dark:bg-gray-700 text-emerald-600 dark:text-emerald-400 border border-dashed border-emerald-300 dark:border-emerald-500 rounded-md hover:bg-emerald-50 dark:hover:bg-emerald-900/30 hover:text-emerald-700 dark:hover:text-emerald-300 hover:border-solid transition-all flex items-center justify-center gap-2"
+            >
+              <i class="fas fa-plus text-sm"></i>
+              Add Task
+            </button>
+          </div>
         </div>
       </div>
     </main>
 
-    <footer
-      class="flex justify-end mt-8 mr-2 px-2 pb-4 md:fixed md:bottom-8 md:right-12"
-    >
+    <footer class="flex justify-end p-4 md:p-8 fixed bottom-0 right-0 z-10">
       <a
         href="https://github.com/devwithjay/arithmetica"
         target="_blank"
@@ -288,7 +296,7 @@
 
     <div
       id="task-modal"
-      class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4"
+      class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4"
     >
       <div
         class="bg-white dark:bg-gray-800 rounded-lg shadow-lg w-full max-w-md overflow-hidden"
