@@ -15,22 +15,24 @@
     class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 min-h-screen transition-colors duration-200"
   >
     <header
-      class="fixed top-0 left-0 right-0 flex justify-between items-center p-4 md:p-6 bg-white dark:bg-gray-800 shadow-md z-10"
+      class="fixed top-0 left-0 right-0 flex justify-between items-center p-4 md:p-8 bg-white dark:bg-gray-800 shadow-md z-10"
     >
       <div class="flex items-center">
-        <span class="text-gray-800 dark:text-white text-sm md:text-base">
+        <span
+          class="text-gray-800 dark:text-white text-sm md:text-base lg:text-xl tracking-wider"
+        >
           Developed By
           <a
             href="https://devwithjay.com"
             target="_blank"
-            class="ml-1 font-medium hover:underline decoration-2 underline-offset-4 transition-all duration-300 animate-pulse"
+            class="font-medium hover:underline decoration-2 underline-offset-4 transition-all duration-300 animate-pulse"
             >Jay</a
           >
         </span>
       </div>
 
       <div
-        class="flex items-center justify-around w-20 md:w-28 h-8 md:h-10 bg-gray-100 dark:bg-gray-700 rounded-full px-2 cursor-pointer transition-colors duration-300"
+        class="flex items-center justify-around w-20 md:w-28 h-8 md:h-10 lg:h-11 bg-gray-100 dark:bg-gray-700 rounded-full px-2 cursor-pointer transition-colors duration-300"
         id="theme-toggle"
       >
         <span class="text-gray-800 dark:text-gray-400">
@@ -124,35 +126,15 @@
       </div>
     </header>
 
-    <div
-      class="fixed bottom-4 right-4 md:bottom-8 md:right-12 w-8 h-8 md:w-10 md:h-10"
-    >
-      <a
-        href="https://github.com/devwithjay/arithmetica"
-        target="_blank"
-        class="block"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          class="w-full h-full fill-gray-800 dark:fill-white animate-pulse"
-        >
-          <path
-            d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.5 11.5 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12"
-          />
-        </svg>
-      </a>
-    </div>
-
     <main class="pt-20 p-4 md:p-6 max-w-7xl mx-auto">
       <div
-        class="grid mt-40 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
+        class="grid mt-8 sm:mt-16 md:mt-24 lg:mt-32 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
       >
         <div
-          class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col"
+          class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col h-full"
         >
           <div
-            class="bg-primary text-white p-3 flex justify-between items-center"
+            class="bg-gradient-to-r from-indigo-600 to-violet-500 dark:from-indigo-700 dark:to-violet-600 text-white p-3 flex justify-between items-center"
           >
             <h3 class="font-semibold text-base">To Do</h3>
             <div class="flex space-x-1">
@@ -170,11 +152,11 @@
           </div>
 
           <div
-            class="bg-gray-100 dark:bg-gray-700 flex-grow p-3 overflow-y-auto max-h-[70vh] space-y-3"
+            class="task-list bg-gray-50 dark:bg-gray-700 flex-grow p-3 overflow-y-auto max-h-[70vh] space-y-3"
           ></div>
 
           <button
-            class="m-3 py-2 px-4 bg-gray-100 dark:bg-gray-700 text-primary border border-dashed border-primary-light rounded hover:bg-primary-light hover:text-white hover:border-solid transition-all flex items-center justify-center gap-2"
+            class="m-3 py-2 px-4 bg-gray-50 dark:bg-gray-700 text-indigo-600 dark:text-indigo-400 border border-dashed border-indigo-300 dark:border-indigo-500 rounded-md hover:bg-indigo-50 dark:hover:bg-indigo-900/30 hover:text-indigo-700 dark:hover:text-indigo-300 hover:border-solid transition-all flex items-center justify-center gap-2"
           >
             <i class="fas fa-plus text-sm"></i>
             Add Task
@@ -182,10 +164,10 @@
         </div>
 
         <div
-          class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col"
+          class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col h-full"
         >
           <div
-            class="bg-primary text-white p-3 flex justify-between items-center"
+            class="bg-gradient-to-r from-blue-500 to-cyan-500 dark:from-blue-600 dark:to-cyan-600 text-white p-3 flex justify-between items-center"
           >
             <h3 class="font-semibold text-base">In Progress</h3>
             <div class="flex space-x-1">
@@ -203,11 +185,11 @@
           </div>
 
           <div
-            class="bg-gray-100 dark:bg-gray-700 flex-grow p-3 overflow-y-auto max-h-[70vh] space-y-3"
+            class="task-list bg-gray-50 dark:bg-gray-700 flex-grow p-3 overflow-y-auto max-h-[70vh] space-y-3"
           ></div>
 
           <button
-            class="m-3 py-2 px-4 bg-gray-100 dark:bg-gray-700 text-primary border border-dashed border-primary-light rounded hover:bg-primary-light hover:text-white hover:border-solid transition-all flex items-center justify-center gap-2"
+            class="m-3 py-2 px-4 bg-gray-50 dark:bg-gray-700 text-blue-600 dark:text-blue-400 border border-dashed border-blue-300 dark:border-blue-500 rounded-md hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:text-blue-700 dark:hover:text-blue-300 hover:border-solid transition-all flex items-center justify-center gap-2"
           >
             <i class="fas fa-plus text-sm"></i>
             Add Task
@@ -215,10 +197,10 @@
         </div>
 
         <div
-          class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col"
+          class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col h-full"
         >
           <div
-            class="bg-primary text-white p-3 flex justify-between items-center"
+            class="bg-gradient-to-r from-amber-500 to-orange-500 dark:from-amber-600 dark:to-orange-600 text-white p-3 flex justify-between items-center"
           >
             <h3 class="font-semibold text-base">Review</h3>
             <div class="flex space-x-1">
@@ -236,11 +218,11 @@
           </div>
 
           <div
-            class="bg-gray-100 dark:bg-gray-700 flex-grow p-3 overflow-y-auto max-h-[70vh] space-y-3"
+            class="task-list bg-gray-50 dark:bg-gray-700 flex-grow p-3 overflow-y-auto max-h-[70vh] space-y-3"
           ></div>
 
           <button
-            class="m-3 py-2 px-4 bg-gray-100 dark:bg-gray-700 text-primary border border-dashed border-primary-light rounded hover:bg-primary-light hover:text-white hover:border-solid transition-all flex items-center justify-center gap-2"
+            class="m-3 py-2 px-4 bg-gray-50 dark:bg-gray-700 text-amber-600 dark:text-amber-400 border border-dashed border-amber-300 dark:border-amber-500 rounded-md hover:bg-amber-50 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 hover:border-solid transition-all flex items-center justify-center gap-2"
           >
             <i class="fas fa-plus text-sm"></i>
             Add Task
@@ -248,10 +230,10 @@
         </div>
 
         <div
-          class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col"
+          class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col h-full"
         >
           <div
-            class="bg-primary text-white p-3 flex justify-between items-center"
+            class="bg-gradient-to-r from-emerald-500 to-teal-500 dark:from-emerald-600 dark:to-teal-600 text-white p-3 flex justify-between items-center"
           >
             <h3 class="font-semibold text-base">Done</h3>
             <div class="flex space-x-1">
@@ -269,11 +251,11 @@
           </div>
 
           <div
-            class="bg-gray-100 dark:bg-gray-700 flex-grow p-3 overflow-y-auto max-h-[70vh] space-y-3"
+            class="task-list bg-gray-50 dark:bg-gray-700 flex-grow p-3 overflow-y-auto max-h-[70vh] space-y-3"
           ></div>
 
           <button
-            class="m-3 py-2 px-4 bg-gray-100 dark:bg-gray-700 text-primary border border-dashed border-primary-light rounded hover:bg-primary-light hover:text-white hover:border-solid transition-all flex items-center justify-center gap-2"
+            class="m-3 py-2 px-4 bg-gray-50 dark:bg-gray-700 text-emerald-600 dark:text-emerald-400 border border-dashed border-emerald-300 dark:border-emerald-500 rounded-md hover:bg-emerald-50 dark:hover:bg-emerald-900/30 hover:text-emerald-700 dark:hover:text-emerald-300 hover:border-solid transition-all flex items-center justify-center gap-2"
           >
             <i class="fas fa-plus text-sm"></i>
             Add Task
@@ -281,6 +263,28 @@
         </div>
       </div>
     </main>
+
+    <footer
+      class="flex justify-end mt-8 mr-2 px-2 pb-4 md:fixed md:bottom-8 md:right-12"
+    >
+      <a
+        href="https://github.com/devwithjay/arithmetica"
+        target="_blank"
+        aria-label="GitHub repository"
+        title="View GitHub Repository"
+        class="w-8 h-8 md:w-9 md:h-9 flex items-center justify-center"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          class="w-full h-full fill-gray-800 dark:fill-white"
+        >
+          <path
+            d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.5 11.5 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12"
+          />
+        </svg>
+      </a>
+    </footer>
 
     <div
       id="task-modal"
@@ -312,7 +316,7 @@
               <input
                 type="text"
                 id="task-title"
-                class="w-full px-3 py-2 text-sm rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-primary"
+                class="w-full px-3 py-2 text-sm rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-indigo-500 dark:focus:ring-indigo-400"
                 required
               />
             </div>
@@ -325,7 +329,7 @@
               <textarea
                 id="task-description"
                 rows="3"
-                class="w-full px-3 py-2 text-sm rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-primary"
+                class="w-full px-3 py-2 text-sm rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-indigo-500 dark:focus:ring-indigo-400"
               ></textarea>
             </div>
             <div class="mb-4">
@@ -336,7 +340,7 @@
               >
               <select
                 id="task-priority"
-                class="w-full px-3 py-2 text-sm rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-primary"
+                class="w-full px-3 py-2 text-sm rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-indigo-500 dark:focus:ring-indigo-400"
               >
                 <option value="low">Low</option>
                 <option value="medium">Medium</option>
@@ -352,7 +356,7 @@
               <input
                 type="date"
                 id="task-due-date"
-                class="w-full px-3 py-2 text-sm rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-primary"
+                class="w-full px-3 py-2 text-sm rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-indigo-500 dark:focus:ring-indigo-400"
               />
             </div>
             <div class="mb-4">
@@ -364,30 +368,8 @@
               <input
                 type="text"
                 id="task-assignee"
-                class="w-full px-3 py-2 text-sm rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-primary"
+                class="w-full px-3 py-2 text-sm rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-indigo-500 dark:focus:ring-indigo-400"
               />
-            </div>
-            <div class="mb-4">
-              <label
-                for="task-attachments"
-                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-                >Attachments</label
-              >
-              <div class="flex items-center">
-                <input
-                  type="file"
-                  id="task-attachments"
-                  class="hidden"
-                  multiple
-                />
-                <button
-                  type="button"
-                  class="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
-                >
-                  Browse Files
-                </button>
-              </div>
-              <div class="mt-2 selected-files"></div>
             </div>
             <div class="flex justify-end space-x-4 mt-6">
               <button
@@ -398,7 +380,7 @@
               </button>
               <button
                 type="submit"
-                class="px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark transition-colors"
+                class="px-4 py-2 bg-gradient-to-r from-indigo-600 to-violet-500 dark:from-indigo-700 dark:to-violet-600 text-white rounded-md hover:from-indigo-700 hover:to-violet-600 dark:hover:from-indigo-800 dark:hover:to-violet-700 transition-colors"
               >
                 Save Task
               </button>
