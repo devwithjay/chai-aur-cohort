@@ -287,3 +287,11 @@
 .dark .hover\:bg-emerald-900\/30:hover {
   background-color: rgba(38, 166, 154, 0.3);
 }
+button[data-custom-color] {
+  color: var(--btn-color) !important;
+  border-color: var(--btn-color) !important;
+}
+
+button[data-custom-color]:hover {
+  background-color: var(--btn-hover-bg) !important;
+}

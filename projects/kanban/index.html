@@ -141,7 +141,7 @@
             <h3 class="font-semibold text-sm md:text-base">To Do</h3>
             <div class="flex space-x-1">
               <button
-                class="text-white hover:bg-white/20 p-1 rounded transition-colors"
+                class="edit-board-btn text-white hover:bg-white/20 p-1 rounded transition-colors"
               >
                 <i class="fas fa-pencil-alt text-sm"></i>
               </button>
@@ -154,7 +154,7 @@
           </div>
 
           <div
-            class="task-list flex-grow bg-gray-50 dark:bg-gray-700 p-3 overflow-y-auto space-y-3 h-full"
+            class="task-list flex-grow bg-gray-50 dark:bg-gray-700 p-4 overflow-y-auto space-y-3 h-full"
           ></div>
 
           <div class="flex-shrink-0 p-3">
@@ -176,7 +176,7 @@
             <h3 class="font-semibold text-sm md:text-base">In Progress</h3>
             <div class="flex space-x-1">
               <button
-                class="text-white hover:bg-white/20 p-1 rounded transition-colors"
+                class="edit-board-btn text-white hover:bg-white/20 p-1 rounded transition-colors"
               >
                 <i class="fas fa-pencil-alt text-sm"></i>
               </button>
@@ -211,7 +211,7 @@
             <h3 class="font-semibold text-sm md:text-base">Review</h3>
             <div class="flex space-x-1">
               <button
-                class="text-white hover:bg-white/20 p-1 rounded transition-colors"
+                class="edit-board-btn text-white hover:bg-white/20 p-1 rounded transition-colors"
               >
                 <i class="fas fa-pencil-alt text-sm"></i>
               </button>
@@ -227,7 +227,7 @@
             class="task-list bg-gray-50 dark:bg-gray-700 flex-grow p-3 overflow-y-auto space-y-3 h-full"
           ></div>
 
-          <div class="flex-shrink-0 p-3">
+          <div class="flex-shrink-0 p-4">
             <button
               class="w-full py-2 px-4 bg-gray-50 dark:bg-gray-700 text-amber-600 dark:text-amber-400 border border-dashed border-amber-300 dark:border-amber-500 rounded-md hover:bg-amber-50 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 hover:border-solid transition-all flex items-center justify-center gap-2"
             >
@@ -246,7 +246,7 @@
             <h3 class="font-semibold text-sm md:text-base">Done</h3>
             <div class="flex space-x-1">
               <button
-                class="text-white hover:bg-white/20 p-1 rounded transition-colors"
+                class="edit-board-btn text-white hover:bg-white/20 p-1 rounded transition-colors"
               >
                 <i class="fas fa-pencil-alt text-sm"></i>
               </button>
@@ -262,7 +262,7 @@
             class="task-list bg-gray-50 dark:bg-gray-700 flex-grow p-3 overflow-y-auto space-y-3 h-full"
           ></div>
 
-          <div class="flex-shrink-0 p-3">
+          <div class="flex-shrink-0 p-4">
             <button
               class="w-full py-2 px-4 bg-gray-50 dark:bg-gray-700 text-emerald-600 dark:text-emerald-400 border border-dashed border-emerald-300 dark:border-emerald-500 rounded-md hover:bg-emerald-50 dark:hover:bg-emerald-900/30 hover:text-emerald-700 dark:hover:text-emerald-300 hover:border-solid transition-all flex items-center justify-center gap-2"
             >
@@ -392,6 +392,77 @@
               >
                 Save Task
               </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="edit-board-modal"
+      class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4"
+    >
+      <div
+        class="bg-white dark:bg-gray-800 rounded-lg shadow-lg w-full max-w-md overflow-hidden"
+      >
+        <div
+          class="p-4 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center"
+        >
+          <h3 class="font-medium text-gray-900 dark:text-white">Edit Board</h3>
+          <button
+            id="close-edit-board-modal"
+            class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+          >
+            &times;
+          </button>
+        </div>
+        <div class="p-4">
+          <form id="edit-board-form">
+            <div class="mb-4">
+              <label
+                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                >Board Name</label
+              >
+              <input
+                id="board-name-input"
+                type="text"
+                class="w-full px-3 py-2 rounded-md border dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                >Board Color</label
+              >
+              <input
+                id="board-color-input"
+                type="color"
+                class="h-10 w-10 p-0 rounded-md border-0 bg-transparent cursor-pointer"
+              />
+            </div>
+            <div class="flex justify-between items-center mt-6">
+              <button
+                type="button"
+                id="clear-board-btn"
+                class="px-3 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition-colors"
+              >
+                Clear Board
+              </button>
+              <div class="space-x-2">
+                <button
+                  type="button"
+                  id="cancel-edit-board"
+                  class="px-3 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  class="px-3 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600 transition-colors"
+                >
+                  Save Changes
+                </button>
+              </div>
             </div>
           </form>
         </div>

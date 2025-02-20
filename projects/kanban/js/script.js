@@ -3,11 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const htmlElement = document.documentElement;
   const sunIcon = themeToggle.children[0];
   const moonIcon = themeToggle.children[1];
+
   if (localStorage.getItem('theme') === 'dark') {
     htmlElement.classList.add('dark');
   } else {
     htmlElement.classList.remove('dark');
   }
+
   themeToggle.addEventListener('click', event => {
     if (event.target.closest('span') === sunIcon) {
       htmlElement.classList.remove('dark');
@@ -24,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeModalButtons = document.querySelectorAll(
     '#task-modal button:not([type="submit"])',
   );
+
   const taskLists = document.querySelectorAll('.task-list');
 
   let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
@@ -102,6 +105,19 @@ document.addEventListener('DOMContentLoaded', () => {
     taskModal.classList.add('hidden');
     taskModal.classList.remove('flex');
   });
+
+  function hexToRgb(hex) {
+    const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+    hex = hex.replace(shorthandRegex, (m, r, g, b) => r + r + g + g + b + b);
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result
+      ? {
+          r: parseInt(result[1], 16),
+          g: parseInt(result[2], 16),
+          b: parseInt(result[3], 16),
+        }
+      : null;
+  }
 
   function saveTasks() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -277,5 +293,102 @@ document.addEventListener('DOMContentLoaded', () => {
   function formatDate(dateString) {
     const options = {year: 'numeric', month: 'short', day: 'numeric'};
     return new Date(dateString).toLocaleDateString(undefined, options);
+  }
+
+  const editBoardModal = document.getElementById('edit-board-modal');
+  const closeEditBoardModal = document.getElementById('close-edit-board-modal');
+  const editBoardForm = document.getElementById('edit-board-form');
+  const boardNameInput = document.getElementById('board-name-input');
+  const boardColorInput = document.getElementById('board-color-input');
+  const cancelEditBoard = document.getElementById('cancel-edit-board');
+  const clearBoardBtn = document.getElementById('clear-board-btn');
+
+  let currentBoardElement = null;
+
+  document.querySelectorAll('.edit-board-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+      const board = e.target.closest('.flex-col');
+      currentBoardElement = board;
+
+      const boardName = board.querySelector('h3').textContent.trim();
+      boardNameInput.value = boardName;
+
+      const header = board.querySelector('div:first-child');
+      const currentBg = window.getComputedStyle(header).backgroundColor;
+      boardColorInput.value = rgbToHex(currentBg);
+
+      editBoardModal.classList.remove('hidden');
+      editBoardModal.classList.add('flex');
+    });
+  });
+
+  closeEditBoardModal.addEventListener('click', hideEditBoardModal);
+  cancelEditBoard.addEventListener('click', hideEditBoardModal);
+
+  clearBoardBtn.addEventListener('click', () => {
+    if (confirm('Clear all tasks in this board?')) {
+      const taskList = currentBoardElement.querySelector('.task-list');
+      taskList.innerHTML = '';
+
+      const columnIndex = Array.from(
+        document.querySelectorAll('.task-list'),
+      ).indexOf(taskList);
+      tasks = tasks.filter(task => task.column !== columnIndex);
+      saveTasks();
+    }
+  });
+
+  editBoardForm.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const newBoardName = boardNameInput.value.trim();
+    const newBoardColor = boardColorInput.value;
+
+    if (currentBoardElement) {
+      currentBoardElement.querySelector('h3').textContent = newBoardName;
+      const header = currentBoardElement.querySelector('div:first-child');
+      header.style.background = newBoardColor;
+
+      const addTaskButton = currentBoardElement.querySelector(
+        'button:has(i.fa-plus)',
+      );
+      if (addTaskButton) {
+        const classesToRemove = [
+          'text-gray-600',
+          'dark:text-gray-400',
+          'border-gray-300',
+          'dark:border-gray-600',
+          'hover:bg-gray-100',
+          'dark:hover:bg-gray-700',
+        ];
+        addTaskButton.classList.remove(...classesToRemove);
+
+        addTaskButton.setAttribute('data-custom-color', 'true');
+        const rgb = hexToRgb(newBoardColor);
+        if (rgb) {
+          addTaskButton.style.setProperty('--btn-color', newBoardColor);
+          addTaskButton.style.setProperty(
+            '--btn-hover-bg',
+            `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.1)`,
+          );
+        }
+      }
+    }
+
+    hideEditBoardModal();
+  });
+
+  function hideEditBoardModal() {
+    editBoardModal.classList.add('hidden');
+    editBoardModal.classList.remove('flex');
+  }
+
+  function rgbToHex(rgb) {
+    const rgbValues = rgb.match(/\d+/g).map(Number);
+    return '#' + rgbValues.map(x => x.toString(16).padStart(2, '0')).join('');
+  }
+
+  function saveTasks() {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
   }
 });
