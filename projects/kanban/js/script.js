@@ -116,6 +116,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  function handleDragStart(event) {
+    const taskElement = event.target.closest('.task');
+    const taskId = taskElement.dataset.taskId;
+    event.dataTransfer.setData('text/plain', taskId);
+    taskElement.classList.add('opacity-50');
+  }
+
+  function handleDragOver(event) {
+    event.preventDefault();
+    event.currentTarget.classList.add('bg-gray-200', 'dark:bg-gray-700');
+  }
+
+  function handleDragLeave(event) {
+    event.currentTarget.classList.remove('bg-gray-200');
+  }
+
+  function handleDrop(event) {
+    event.preventDefault();
+    const taskId = event.dataTransfer.getData('text/plain');
+    const newColumn = event.target.closest('.task-list');
+
+    event.currentTarget.classList.remove('bg-gray-200');
+
+    if (!newColumn) return;
+
+    const newColumnIndex = Array.from(taskLists).indexOf(newColumn);
+    updateTaskColumn(taskId, newColumnIndex);
+  }
+
+  function updateTaskColumn(taskId, newColumnIndex) {
+    const task = tasks.find(t => t.id === taskId);
+    if (task) {
+      task.column = newColumnIndex;
+      saveTasks();
+      renderAllTasks();
+    }
+  }
+
+  taskLists.forEach(list => {
+    list.addEventListener('dragover', handleDragOver);
+    list.addEventListener('dragleave', handleDragLeave);
+    list.addEventListener('drop', handleDrop);
+  });
+
   function renderTask(task, targetColumn) {
     const taskElement = document.createElement('div');
     taskElement.className =
@@ -145,6 +189,12 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const truncatedDescription = truncateText(task.description, 100);
+
+    taskElement.draggable = true;
+    taskElement.addEventListener('dragstart', handleDragStart);
+    taskElement.addEventListener('dragend', event => {
+      event.target.classList.remove('opacity-50');
+    });
 
     taskElement.innerHTML = `
   <div class="flex justify-between items-start mb-4">
@@ -191,6 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     targetColumn.appendChild(taskElement);
   }
+
   function editTask(taskId) {
     const task = tasks.find(t => t.id === taskId);
     if (!task) return;
