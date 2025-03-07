@@ -16,7 +16,9 @@
 
   &nbsp;[Repository](https://github.com/devwithjay/arithmetica) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Live Demo](https://arithmetica.vercel.app/)
 
-- ### [Week 7 : Kanban](./kanban/README.mdi)
+- ### [Week 7 : Kanban](./kanban/README.md)
+
+  &nbsp;[Repository](https://github.com/devwithjay/boardify) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Live Demo](https://the-boardify.vercel.app/)
 
 <br>
 
