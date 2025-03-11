@@ -74,6 +74,16 @@
 
 <br>
 
+### [HTML Semantics](https://blog.devwithjay.com/html-semantics)
+
+  <a href="https://blog.devwithjay.com/html-semantics">
+      <p align=center>
+      <img width = "500px" alt="Jio Network blocking the view? Network switch reveals the magic!" src="./assets/b7-banner.png">
+    <p>
+  </a>
+
+<br>
+
 ## Contributing
 
 Contributions are always welcome!
