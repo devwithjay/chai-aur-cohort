@@ -23,6 +23,8 @@
 
 - ### [Week 5: DOM Challenges](./week-5/README.md)
 
+- ### [Week 9: Masterji Challenges](./week-9/README.md)
+
   </br>
 
 ## Contributing
