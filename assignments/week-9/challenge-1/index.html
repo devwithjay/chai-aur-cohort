@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VidTube</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#0f0f0f] text-white min-h-screen">
+    <header class="sticky top-0 z-10 bg-[#0f0f0f] shadow-md py-3 px-4 md:px-6">
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <svg viewBox="0 0 24 24" class="w-8 h-8 text-red-600 fill-current">
+            <path
+              d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4S5.746,4,4.186,4.418 c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768 C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.861-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M10,15.464V8.536L16,12L10,15.464z"
+            ></path>
+          </svg>
+          <span class="text-xl font-bold text-white">VidTube</span>
+        </div>
+
+        <div class="w-full max-w-xl px-4">
+          <div class="relative">
+            <input
+              type="text"
+              placeholder="Search videos..."
+              class="w-full bg-[#121212] text-white border border-[#303030] rounded-full py-2 px-4 focus:outline-none focus:border-blue-500"
+              id="search-input"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-6">
+      <div
+        id="video-container"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+      >
+        <div
+          id="loader"
+          class="col-span-full flex justify-center items-center py-20"
+        >
+          <div
+            class="w-12 h-12 border-4 border-[#303030] border-t-red-600 rounded-full animate-spin"
+          ></div>
+        </div>
+      </div>
+
+      <div
+        id="pagination"
+        class="mt-8 flex justify-center items-center space-x-4 hidden"
+      >
+        <button
+          id="prev-page"
+          class="px-4 py-2 bg-[#272727] rounded-md hover:bg-[#3d3d3d] disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          Previous
+        </button>
+        <span id="page-info" class="text-gray-300">Page 1 of 1</span>
+        <button
+          id="next-page"
+          class="px-4 py-2 bg-[#272727] rounded-md hover:bg-[#3d3d3d] disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          Next
+        </button>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
