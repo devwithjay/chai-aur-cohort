@@ -84,6 +84,26 @@
 
 <br>
 
+### [Objects v/s Maps](https://blog.devwithjay.com/objects-vs-maps)
+
+  <a href="https://blog.devwithjay.com/objects-vs-maps">
+      <p align=center>
+      <img width = "500px" alt="Jio Network blocking the view? Network switch reveals the magic!" src="./assets/b8-banner.png">
+    <p>
+  </a>
+
+<br>
+
+### [Arrays v/s Sets](https://blog.devwithjay.com/arrays-vs-sets)
+
+  <a href="https://blog.devwithjay.com/arrays-vs-sets">
+      <p align=center>
+      <img width = "500px" alt="Jio Network blocking the view? Network switch reveals the magic!" src="./assets/b9-banner.png">
+    <p>
+  </a>
+
+<br>
+
 ## Contributing
 
 Contributions are always welcome!
