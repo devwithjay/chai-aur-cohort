@@ -1,1 +1,18 @@
 @import 'tailwindcss';
+.emoji-btn {
+  transition: transform 0.2s;
+}
+.emoji-btn:hover {
+  transform: scale(1.2);
+}
+.emoji-btn.selected {
+  transform: scale(1.2);
+  box-shadow: 0 0 0 3px rgba(244, 63, 94, 0.5);
+}
+.calendar-day {
+  width: 40px;
+  height: 40px;
+}
+.calendar-day:hover {
+  background-color: rgba(244, 63, 94, 0.1);
+}

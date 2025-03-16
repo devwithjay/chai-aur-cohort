@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Mood Tracker</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body class="bg-gray-100 min-h-screen font-sans">
+    <div class="container mx-auto px-4 py-8">
+      <header class="text-center mb-10">
+        <h1 class="text-3xl font-bold text-gray-800 mb-2">
+          Daily Mood Tracker
+        </h1>
+        <p class="text-gray-600">Track your emotional journey over time</p>
+      </header>
+
+      <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-6 mb-8">
+        <h2 class="text-xl font-semibold mb-4 text-gray-700">
+          How are you feeling today?
+        </h2>
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-6"
+          id="moodSelector"
+        >
+          <button
+            class="emoji-btn cursor-pointer flex flex-col items-center justify-center p-3 rounded-lg bg-gray-50 hover:bg-rose-50"
+            data-mood="happy"
+          >
+            <span class="text-3xl">😊</span>
+            <span class="text-sm mt-2 text-gray-700">Happy</span>
+          </button>
+          <button
+            class="emoji-btn cursor-pointer flex flex-col items-center justify-center p-3 rounded-lg bg-gray-50 hover:bg-rose-50"
+            data-mood="sad"
+          >
+            <span class="text-3xl">😢</span>
+            <span class="text-sm mt-2 text-gray-700">Sad</span>
+          </button>
+          <button
+            class="emoji-btn cursor-pointer flex flex-col items-center justify-center p-3 rounded-lg bg-gray-50 hover:bg-rose-50"
+            data-mood="neutral"
+          >
+            <span class="text-3xl">😐</span>
+            <span class="text-sm mt-2 text-gray-700">Neutral</span>
+          </button>
+          <button
+            class="emoji-btn cursor-pointer flex flex-col items-center justify-center p-3 rounded-lg bg-gray-50 hover:bg-rose-50"
+            data-mood="excited"
+          >
+            <span class="text-3xl">🤩</span>
+            <span class="text-sm mt-2 text-gray-700">Excited</span>
+          </button>
+          <button
+            class="emoji-btn cursor-pointer flex flex-col items-center justify-center p-3 rounded-lg bg-gray-50 hover:bg-rose-50"
+            data-mood="tired"
+          >
+            <span class="text-3xl">😴</span>
+            <span class="text-sm mt-2 text-gray-700">Tired</span>
+          </button>
+          <button
+            class="emoji-btn cursor-pointer flex flex-col items-center justify-center p-3 rounded-lg bg-gray-50 hover:bg-rose-50"
+            data-mood="anxious"
+          >
+            <span class="text-3xl">😰</span>
+            <span class="text-sm mt-2 text-gray-700">Anxious</span>
+          </button>
+          <button
+            class="emoji-btn cursor-pointer flex flex-col items-center justify-center p-3 rounded-lg bg-gray-50 hover:bg-rose-50"
+            data-mood="angry"
+          >
+            <span class="text-3xl">😡</span>
+            <span class="text-sm mt-2 text-gray-700">Angry</span>
+          </button>
+          <button
+            class="emoji-btn cursor-pointer flex flex-col items-center justify-center p-3 rounded-lg bg-gray-50 hover:bg-rose-50"
+            data-mood="grateful"
+          >
+            <span class="text-3xl">🙏</span>
+            <span class="text-sm mt-2 text-gray-700">Grateful</span>
+          </button>
+          <button
+            class="emoji-btn cursor-pointer flex flex-col items-center justify-center p-3 rounded-lg bg-gray-50 hover:bg-rose-50"
+            data-mood="relaxed"
+          >
+            <span class="text-3xl">😌</span>
+            <span class="text-sm mt-2 text-gray-700">Relaxed</span>
+          </button>
+          <button
+            class="emoji-btn cursor-pointer flex flex-col items-center justify-center p-3 rounded-lg bg-gray-50 hover:bg-rose-50"
+            data-mood="frustrated"
+          >
+            <span class="text-3xl">😤</span>
+            <span class="text-sm mt-2 text-gray-700">Frustrated</span>
+          </button>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center gap-4 mb-6">
+          <input
+            type="text"
+            id="moodNote"
+            placeholder="Add a note about your day (optional)"
+            class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-300"
+          />
+          <button
+            id="saveButton"
+            class="w-full sm:w-auto px-6 py-2 cursor-pointer bg-rose-600 text-white font-medium rounded-lg hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-rose-500"
+          >
+            Save
+          </button>
+        </div>
+        <div id="todayMood" class="hidden bg-rose-50 p-4 rounded-lg">
+          <p class="text-center">You've already logged your mood for today</p>
+          <div class="flex items-center justify-center gap-2 mt-2">
+            <span id="todayEmoji" class="text-3xl"></span>
+            <span id="todayNote" class="text-gray-700"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-6 mb-8">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-xl font-semibold text-gray-700">
+            Your Mood Timeline
+          </h2>
+          <div class="flex gap-2">
+            <button
+              id="dayView"
+              class="cursor-pointer px-3 py-1 bg-rose-600 text-white rounded hover:bg-rose-700"
+            >
+              Day
+            </button>
+            <button
+              id="weekView"
+              class="cursor-pointer px-3 py-1 bg-gray-200 text-gray-700 rounded hover:bg-rose-200"
+            >
+              Week
+            </button>
+            <button
+              id="monthView"
+              class="cursor-pointer px-3 py-1 bg-gray-200 text-gray-700 rounded hover:bg-rose-200"
+            >
+              Month
+            </button>
+            <button
+              id="calendarView"
+              class="cursor-pointer px-3 py-1 bg-gray-200 text-gray-700 rounded hover:bg-rose-200"
+            >
+              Calendar
+            </button>
+          </div>
+        </div>
+
+        <div id="timelineView" class="overflow-x-auto">
+          <!-- Timeline will be inserted here -->
+        </div>
+
+        <div id="calendarContainer" class="hidden mt-6">
+          <div class="flex justify-between items-center mb-4">
+            <button
+              id="prevMonth"
+              class="cursor-pointer p-2 bg-gray-200 rounded-full hover:bg-rose-200"
+            >
+              &larr;
+            </button>
+            <h3 id="currentMonthDisplay" class="text-lg font-medium"></h3>
+            <button
+              id="nextMonth"
+              class="cursor-pointer p-2 bg-gray-200 rounded-full hover:bg-rose-200"
+            >
+              &rarr;
+            </button>
+          </div>
+          <div
+            class="grid grid-cols-7 gap-1 text-center font-medium text-gray-700 mb-2"
+          >
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+          </div>
+          <div id="calendarGrid" class="grid grid-cols-7 gap-1"></div>
+        </div>
+      </div>
+
+      <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-6">
+        <h2 class="text-xl font-semibold mb-4 text-gray-700">
+          Mood Statistics
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-medium mb-2 text-gray-700">Most Common Mood</h3>
+            <div class="flex items-center gap-2">
+              <span id="commonMoodEmoji" class="text-4xl">-</span>
+              <span id="commonMoodName" class="text-lg">Not enough data</span>
+            </div>
+          </div>
+          <div class="bg-rose-50 p-4 rounded-lg">
+            <h3 class="font-medium mb-2 text-gray-700">Mood Distribution</h3>
+            <div
+              id="moodDistribution"
+              class="flex items-center justify-around"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
