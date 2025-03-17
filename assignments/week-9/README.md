@@ -9,5 +9,7 @@
 <br>
 
 - ### [Challenge 1](./challenge-1/README.md)
-  
+
 - ### [Challenge 2](./challenge-2/README.md)
+
+- ### [Challenge 3](./challenge-3/README.md)
