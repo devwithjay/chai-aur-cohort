@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quote of the Day</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body class="min-h-screen flex items-center justify-center bg-gray-100 p-4">
+    <div class="container max-w-2xl mx-auto">
+      <div
+        id="quote-container"
+        class="relative shadow-xl rounded-2xl overflow-hidden w-full"
+      >
+        <div
+          id="quote-content"
+          class="relative z-10 p-8 md:p-10 min-h-[400px] flex flex-col"
+        >
+          <div class="flex justify-center mb-14">
+            <h1
+              class="text-4xl font-medium text-center text-white drop-shadow-md"
+            >
+              <span class="bg-rose-400 px-6 py-2 mb-4 rounded-lg shadow-md"
+                >Quote of the Day</span
+              >
+            </h1>
+          </div>
+
+          <div class="mb-6 flex-grow flex flex-col justify-center">
+            <p
+              id="quote-text"
+              class="quote-font text-xl md:text-3xl italic mb-6 text-center fade-in px-6 text-black"
+            >
+              "Loading quote..."
+            </p>
+            <p
+              id="quote-author"
+              class="text-right text-lg md:text-2xl fade-in mt-2 text-black font-light"
+            >
+              — Author
+            </p>
+          </div>
+
+          <div class="flex flex-wrap justify-center gap-4 mt-8">
+            <button
+              id="new-quote-btn"
+              class="bg-rose-500 cursor-pointer hover:bg-rose-600 text-white px-6 py-3 rounded-full flex items-center transition-colors duration-300 shadow-md btn-hover"
+            >
+              <i class="fas fa-sync-alt mr-2"></i> New Quote
+            </button>
+
+            <button
+              id="copy-btn"
+              class="bg-rose-700 cursor-pointer hover:bg-rose-800 text-white px-6 py-3 rounded-full flex items-center transition-colors duration-300 shadow-md btn-hover"
+            >
+              <i class="fas fa-copy mr-2"></i> Copy
+            </button>
+
+            <button
+              id="tweet-btn"
+              class="bg-rose-500 cursor-pointer hover:bg-rose-600 text-white px-6 py-3 rounded-full flex items-center transition-colors duration-300 shadow-md btn-hover"
+            >
+              <i class="fab fa-twitter mr-2"></i> Tweet
+            </button>
+
+            <button
+              id="export-btn"
+              class="bg-rose-700 cursor-pointer hover:bg-rose-800 text-white px-6 py-3 rounded-full flex items-center transition-colors duration-300 shadow-md btn-hover"
+            >
+              <i class="fas fa-download mr-2"></i> Export
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="copy-alert"
+        class="fixed bottom-4 right-4 bg-rose-500 text-white px-6 py-3 rounded-full shadow-lg hidden transform transition-all duration-300 flex items-center"
+      >
+        <i class="fas fa-check-circle mr-2"></i> Quote copied to clipboard!
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
